@@ -11,6 +11,7 @@ function startLighBox(){
   const lightbox = function(element){
     'use strict';
 
+    let simpleDiv;
     let btnClose;
     let btnNav;
     let currentItem;
@@ -51,6 +52,15 @@ function startLighBox(){
           image.alt = element.getAttribute('data-image-alt');
         }
         return image;
+      }
+
+      if (content.match(/\.(pdf)/)) {
+        const iframe = doc.createElement('iframe');
+        iframe.className = 'lightbox-pdf';
+        iframe.src = content;
+        iframe.width="800px";
+        iframe.height="600px";
+        return iframe;
       }
 
       /*NK CHANGE FOR A VIDEO ELEMENT ADD*/
@@ -153,9 +163,12 @@ function startLighBox(){
     };
 
     const build = () => {
+      simpleDiv = doc.createElement("div");
+      simpleDiv.classList.add("top-line");
       btnClose = doc.createElement('button');
       btnClose.setAttribute('aria-label', 'Close');
       btnClose.className = classes.btn + ' ' + classes.btn + '-close';
+      simpleDiv.appendChild(btnClose);
 
       content = doc.createElement('div');
       content.className = 'lightbox-content';
@@ -164,7 +177,7 @@ function startLighBox(){
       wrapper = content.cloneNode(false);
       wrapper.className = 'lightbox-wrapper';
       wrapper.style.animation = [animation.scaleIn, animation.fadeIn];
-      wrapper.appendChild(btnClose);
+      wrapper.appendChild(simpleDiv);
       wrapper.appendChild(content);
 
       container = content.cloneNode(false);

@@ -1,19 +1,26 @@
-/*<!--
-/////////////////////////////////////////////////////////////
+/*////////////////////////////////////////////////////////////
 /// Escapausorus v1 (2020)
 ///	A quick and dirty framework to create small adventure game (certified vanilla JS)
 /// Author: Stéphanie Mader (http://smader.interaction-project.net)
 /// GitHub: https://github.com/RedNaK/escaposaurus
 ///	Licence: MIT
-////////////////////////////////////////////////////////////
--->*/
+///////////////////////////////////////////////////////////*/
+
 
 /*by default there is no margin or padding anywhere*/
 *{ margin: 0px; padding: 0px; }
-a{color:#1022CC;}
+a{ color:#1022CC;}
+
 body{
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: 600;
+
+	/*COLORS*/
+	--xp-light-blue : #3680f3;
+	--xp-dark-blue2 : #2157c4;
+	--xp-dark-blue : #2260da;
+	--xp-dark-grey : #ece9d8;
+	--xp-light-grey : #c0d4f6;
 }
 
 /*on veut la lightbox devant*/
@@ -79,7 +86,7 @@ video{max-width: 960px;}
 	font-weight: bold;
 	padding:5px;
 	background-color:#1022CC;
-	font-family: Roboto;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #main-game-div{
@@ -88,26 +95,29 @@ video{max-width: 960px;}
 
 /*shared style for app*/
 .app-title{
-	height:50px;
-	background-color: #1022CC;
-	border:1px solid white;
+	background-color: var(--xp-dark-blue);
 	color: white;
-	text-align:center;
+	text-align: left;
+	border-radius: .4em .4em 0 0;
+	margin: 0;
+	padding: 5px;
 }
 
 .app-title-span{
-	font-family: Odibee ;
-	font-size:30px;
+	font-size:1em;
+	margin-left:.2em;
+	text-shadow: black 0px 1px;
 }
 
 /*call app*/
 #callApp{
-	width:500px;
+	width:100%;
 	height:auto;
-	padding:0 0 0 0;
-	margin:50 100 12 50;
-	background-color:#fff;
-	border:2px solid black;
+	padding:0;
+	margin-top: 25vh;
+	background-color: var(--xp-dark-grey);
+	border:.2em solid var(--xp-dark-blue);
+	border-radius: .5em .5em 0 0;
 	overflow: auto;
 }
 
@@ -155,13 +165,15 @@ video{max-width: 960px;}
 
 /* udisk app*/
 #folderApp{
-	width:450px;
-	height:650px;
+	width:100%;
+	height:75vh;
+	margin-top: 10vh;
 	overflow: auto;
 	padding:0 0 0 0;
-	margin:50 0 0 150;
-	background-color:#fff;
-	border:2px solid black;
+	/* margin:50 0 0 150; */
+	background-color: var(--xp-dark-grey);
+	border:.2em solid var(--xp-dark-blue);
+	border-radius: .5em .5em 0 0;
 }
 
 #folderApp-content{
@@ -174,11 +186,10 @@ video{max-width: 960px;}
 	z-index:310;
 	left:0%;
 	top:0%;
-
 	width:100%;
 	height:100%;
-	border:1px solid white;
-	background-color:#000;
+	border:.2em solid var(--xp-dark-blue);
+	background-color:var(--xp-dark-grey);
 	text-align: center;
 }
 
@@ -189,8 +200,8 @@ video{max-width: 960px;}
 	z-index:305;
 	left:20%;
 	top:10%;
-	border:1px solid white;
-	background-color:#000;
+	border:.2em solid var(--xp-dark-blue);
+	background-color: var(--xp-dark-grey);
 	width:1000px;
 	text-align: center;
 }
@@ -208,9 +219,10 @@ video{max-width: 960px;}
 	z-index:300;
 	left:45%;
 	top:35%;
-	border:1px solid white;
-	background-color:#000;
+	border:.2em solid var(--xp-dark-blue);
+	background-color:var(--xp-dark-grey);
 	width:200px;
+	border-radius: .5em .5em 0 0;
 }
 
 #solution-window,
@@ -231,6 +243,34 @@ video{max-width: 960px;}
 /*we override part of the lightbox style*/
 .lightbox-image{
 	max-height:90vh;
+
+}
+
+.lightbox-wrapper {
+	background-color: var(--xp-dark-grey);
+	border:.2em solid var(--xp-dark-blue);
+	border-radius: .6em .6em 0 0;
+}
+
+.top-line {
+	background-color: var(--xp-dark-blue);
+	border-radius: .4em .4em 0 0;
+	width: 100%;
+	height: fit-content;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.lightbox-btn-close {
+	background-color: red;
+	/* border-radius: 0 .5em 0 0; */
+	border-radius: .2em;
+	border:.2em solid var(--xp-dark-blue2);
+	height: 2em;
+	position: relative;
+	top: 0;
+	right: 0;
 }
 
 #notnowPrompt-window button,
@@ -245,12 +285,13 @@ video{max-width: 960px;}
 #solution-window button,
 #credit-window button,
 #overlay-index button{
+	/*INTERACTION BUTTON*/
 	color:#fff;
 	background-color: #1022CC;
 	border: none;
 	padding:3px;
 	margin:3px;
-	font-family: Roboto ;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size:14px;
 	font-weight:bold;
 }
@@ -274,7 +315,7 @@ video{max-width: 960px;}
 
 .message-content{
 	text-align:center;
-	color:#fff;
+	color: black;
 	padding:5px;
 }
 
@@ -287,23 +328,26 @@ video{max-width: 960px;}
 #footer{
 	height:34px;
 	width:100%;
-	background-color:#1022CC;
+	background-color:var(--xp-dark-blue);
 	position: absolute;
 	padding-top:3px;
 	padding-bottom:3px;
 	bottom: 0;
-	text-align: center;
+	text-align: left;
+	padding-left: 10px;
 }
 
 .footer-button{
-	color:#000;
-	background-color: #fff;
+	color:var(--xp-light-grey);
+	background-color: var(--xp-light-blue);
 	border:none;
-	margin-right:5px;
-	padding:3px;
-	font-family: Roboto ;
-	font-size:16px;
-	font-weight:bold;
+	border-radius: .3em;
+	margin-right:1px;
+	padding:5px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size:.9em;
+	font-weight:500;
+	box-shadow: #1022CC 2px;
 }
 
 .footer-button:hover{

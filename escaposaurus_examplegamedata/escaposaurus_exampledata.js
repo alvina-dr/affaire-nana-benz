@@ -36,7 +36,7 @@
 	  	{"root":{
 	  		"folders":
 		  		[{"foldername":"affaire-nana-benz", "password":"1323","sequence":0,
-				  	"files":["liste-tissu.pdf"], // liste tissus
+				  	"files":["exemple.pdf"], // liste tissus
 					"folders":[
 						{"foldername":"best-seller", 
 					  		"files":["idgps.png"],"sequence":3}, //les images des motifs qui se vendent le plus
@@ -49,7 +49,7 @@
 					]
 				}],
 			"files":[
-				"lettre.png"]}
+				"exemple.pdf"]}
 		} ;
 
 		var gameTitle = "Escaposaurus Scenario Exemple" ;
@@ -61,14 +61,14 @@
 		var gameThanks = "Remerciements : <br/> ;)" ;
 
 		var OSName = "Nom" ;
-		var explorerName = "DRIVE" ;
-		var callerAppName = "CALL CONTACT" ;
+		var explorerName = "Drive" ;
+		var callerAppName = "Messagerie - Contact" ;
 
 		/*titles of video windows*/
 		var titleData = {} ;
-		titleData.introTitle = "INTRODUCTION" ;
-		titleData.epilogueTitle = "EPILOGUE" ;
-		titleData.callTitle = "APPEL EN COURS..." ;
+		titleData.introTitle = "Introduction" ;
+		titleData.epilogueTitle = "Épilogue" ;
+		titleData.callTitle = "Appel en cours..." ;
 
 		/*change of caller app prompt for each sequence*/
 		var promptDefault = "Rien à demander, ne pas les déranger." ;
