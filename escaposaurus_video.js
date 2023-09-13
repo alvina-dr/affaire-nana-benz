@@ -396,6 +396,7 @@ function checkPassword(userTry, foldername){
 		closeIt("passPrompt-window") ;
 		unlockFolder(foldername) ;
 	}else{
+		closeIt("passPrompt-window") ;
 		openIt("wrongPassword") ;
 	}
 }

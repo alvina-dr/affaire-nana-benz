@@ -123,7 +123,7 @@
 	</div>
 	<div id="callVideo-window" class="hidden">
 		<div class="app-title">
-			<span id="callVideo-title" class="app-title-span">APPEL EN COURS</span>
+			<span id="callVideo-title" class="app-title-span">Appel en cours</span>
 			<button id="btn-closecall" class="lightbox-btn lightbox-btn-close" onclick="closeVideoWindow(this.parentElement.parentElement);"></button>
 		</div>
 		<div id="callVideo-content">	
@@ -131,7 +131,10 @@
 	</div>
 	<!--PASSWORD CAN'T UNLOCK NOW-->
 		<div id="notnowPrompt-window" class="hidden">
-			<div class="app-title"><span class="app-title-span">PROTEGE</span></div>
+			<div class="app-title">
+				<span class="app-title-span">Protégé</span>
+				<button aria-label="Close" class="lightbox-btn lightbox-btn-close" onclick="closeIt('notnowPrompt-window')"></button>
+			</div>
 			<div class="message-content">
 				Le dossier <span id="folderN"></span> ne peut être déverouillé pour le moment<br/>
 				<button class="window-btn" onclick="closeIt('notnowPrompt-window')">OK</button>
@@ -140,14 +143,17 @@
 
 	<!--PASSWORD PROMPT-->
 		<div id="passPrompt-window" class="hidden">
-			<div class="app-title"><span class="app-title-span">PROTEGE</span></div>
+			<div class="app-title">
+				<span class="app-title-span">Protégé</span>
+				<button aria-label="Close" class="lightbox-btn lightbox-btn-close"  onclick="closeIt('passPrompt-window')"></button>
+			</div>
 			<div class="message-content">
 				Dossier : <span id="folderD"></span><br/>
 				<input id="passwordInput" name="passwordInput" type="text" placeholder="mot de passe" value="" autocomplete="off" onkeypress="checkIfEnter(event, passwordInput.value, folderInput.value)" />
 				<input id="folderInput" name="folderInput" type="hidden" value="0" />
 				<button class="window-btn" onclick="checkPassword(passwordInput.value, folderInput.value)">OK</button>
 				&nbsp;&nbsp;
-				<button class="window-btn" onclick="closeIt('passPrompt-window')">ANNULER</button>
+				<!-- <button class="window-btn" onclick="closeIt('passPrompt-window')">ANNULER</button> -->
 			</div>
 		</div>
 
@@ -155,13 +161,13 @@
 		<div id="wrongPassword" class="hidden">
 			<div class="app-title">
 				<span class="app-title-span">:(</span>			
-				<button aria-label="Close" class="lightbox-btn lightbox-btn-close"></button>
+				<button aria-label="Close" class="lightbox-btn lightbox-btn-close" onclick="closeWrongPassword()"></button>
 			</div>
 			<div class="message-content">
 				<br/>
 				Mauvais mot de passe<br/>
 				<br/>
-				<button class="window-btn" onclick="closeWrongPassword()">OK</button>
+				<!-- <button class="window-btn" onclick="closeWrongPassword()">OK</button> -->
 			</div>
 		</div>
 
@@ -266,11 +272,15 @@
 			<br/>
 				<h3 id="home-gameTitle"></h3>
 				<span id="home-gameDescription"></span><br/><br/><br/><br/>
-				<div id="div-homeMission">
-					<h3 id="home-mission"></h3>
-					<img src="escaposaurus_examplegamedata/img/1200px-Microsoft_Windows_XP.png" style="width: 30%;">
-					<video id="vid-overlay" controls="true" autoplay="true" src="" style="text-align:center;max-width:750px;"></video>
-					<br/><br/>
+				<div id="div-homeMission" class="justify-content-md-center" style="display: flex; flex-direction: column; justify-content: center;">
+					<h3 id="home-mission" style="display: none;"></h3>
+					<video id="vid-overlay" controls="true" autoplay="true" src="" style="align-self:center; max-width:500px;"></video>
+					<div style="display: flex; flex-direction: column; align-items: center;" >
+						<img src="escaposaurus_examplegamedata/img/1200px-Microsoft_Windows_XP.png" style="width: 50%;">
+						<img src="escaposaurus_examplegamedata/img/anim/xp-loading.gif" style="width: 30%;">
+
+					</div>
+
 					<button id="overlay-btn" class="window-btn" onclick="closeOverlay('overlay-index')"></btn>
 				</div>
 			</div>

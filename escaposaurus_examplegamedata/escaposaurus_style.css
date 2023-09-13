@@ -83,7 +83,7 @@ video{max-width: 960px;}
 	color:#ffffff;
 	font-size:30px;
 	font-weight: bold;
-	padding:5px;
+	/* padding:5px; */
 	background-color:#1022CC;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -289,6 +289,12 @@ video{max-width: 960px;}
 	background-color: #fff;
 	color:#000;
 	cursor: pointer;
+}
+
+.window-btn {
+	width: fit-content;
+	text-align: center;
+	align-self: center;
 }
 
 .message-content{

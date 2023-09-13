@@ -56,8 +56,8 @@
 
 		var gameTitle = "Escaposaurus Scenario Exemple" ;
 		var gameDescriptionHome = "Ceci est une courte aventure d'exemple pour montrer ce que le framework Escaposaurus permet facilement de réaliser.<br/>Le code source est téléchargeable sur <a href='https://github.com/RedNaK/escaposaurus' target='_blank'>GitHub</a>" ;
-		var gameMissionCall = "Voici la vidéo qu'Albert a envoyé à votre bureau d'informaticien spécialisé en récupération de données" ;
-		var gameMissionAccept = "&raquo;&raquo; Accepter la mission et charger la clé USB dans le serveur virtuel (JOUER) &laquo;&laquo;" ;
+		var gameMissionCall = "" ;
+		var gameMissionAccept = "Commencer" ;
 
 		var gameCredit = "Un jeu conçu et réalisé par : <br/>Stéphanie Mader" ;
 		var gameThanks = "Remerciements : <br/> ;)" ;
