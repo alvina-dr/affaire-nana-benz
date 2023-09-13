@@ -381,19 +381,23 @@ function doThePasswordMatch(userTry, foldername){
 	}
 }
 
-function checkIfEnter(e, userTry, foldername){
+//for check password correct subject is equivalent to foldername
+function checkIfEnter(e, input, correctSubject, functionName) { 
 	if(e.keyCode === 13){
 	    e.preventDefault(); // Ensure it is only this code that runs
 
-	    checkPassword(userTry, foldername) ;
-	}
-}
-
-function checkIfEnterSubject(e, userSubject, correctSubject) {
-	if(e.keyCode === 13){
-	    e.preventDefault(); // Ensure it is only this code that runs
-
-	    checkCallSubject(userSubject,  correctSubject);
+		if (functionName === "checkPassword") {
+			checkPassword(input, correctSubject);
+		} 
+		else if (functionName === "checkCallSubject") {
+			checkCallSubject(input,  correctSubject);
+		} 
+		else if (functionName === "checkPhoneNumber") {
+			checkPhoneNumber(input);
+		} 
+		else {
+			console.log("Function unknown");
+		}
 	}
 }
 
@@ -427,9 +431,7 @@ function checkCallSubject(userSubject, correctSubject) {
 
 function checkPhoneNumber(numberInput) {
 	if (numberInput === "0686") {
-		//add new contact 
 		createContact(missingContact, document.getElementById("normal-contact"));
-
 		//make notif that new contact is available
 	} else {
 		openIt("wrongSubject") ;

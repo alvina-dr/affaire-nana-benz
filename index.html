@@ -152,7 +152,7 @@
 			</div>
 			<div class="message-content">
 				Dossier : <span id="folderD"></span><br/>
-				<input id="passwordInput" name="passwordInput" type="text" placeholder="mot de passe" value="" autocomplete="off" onkeypress="checkIfEnter(event, passwordInput.value, folderInput.value)" />
+				<input id="passwordInput" name="passwordInput" type="text" placeholder="mot de passe" value="" autocomplete="off" onkeypress="checkIfEnter(event, passwordInput.value, folderInput.value, 'checkPassword')" />
 				<input id="folderInput" name="folderInput" type="hidden" value="0" />
 				<button class="window-btn" onclick="checkPassword(passwordInput.value, folderInput.value)">OK</button>
 				&nbsp;&nbsp;
@@ -182,7 +182,7 @@
 			</div>
 			<div class="message-content">
 				Sujet de conversation ? <span id="folderD"></span><br/>
-				<input id="subjectInput" name="subjectInput" type="text" placeholder="De quoi parler ?" value="" autocomplete="off" onkeypress="checkIfEnterSubject(event, subjectInput.value, 'password')" />
+				<input id="subjectInput" name="subjectInput" type="text" placeholder="De quoi parler ?" value="" autocomplete="off" onkeypress="checkIfEnter(event, subjectInput.value, 'password', 'checkCallSubject')" />
 				<!-- <input id="folderInput" name="folderInput" type="hidden" value="0" /> -->
 				<button class="window-btn" onclick="checkCallSubject(subjectInput.value, 'password')">OK</button>
 				&nbsp;&nbsp;
@@ -198,7 +198,7 @@
 			</div>
 			<div class="message-content">
 				Nouveau contact <span id="folderD"></span><br/>
-				<input id="numInput" name="numInput" type="text" placeholder="Tel." value="" autocomplete="off" onkeypress="checkIfEnterSubject(event, numInput.value, 'password')" />
+				<input id="numInput" name="numInput" type="text" placeholder="Tel." value="" autocomplete="off" onkeypress="checkIfEnter(event, numInput.value, '', 'checkPhoneNumber')" />
 				<!-- <input id="folderInput" name="folderInput" type="hidden" value="0" /> -->
 				<button class="window-btn" onclick="checkPhoneNumber(numInput.value)">OK</button>
 				&nbsp;&nbsp;
