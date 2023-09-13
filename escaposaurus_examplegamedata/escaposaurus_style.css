@@ -218,6 +218,7 @@ video{
 	text-align: center;
 }
 
+#add-contact-window,
 #wrongSubject,
 #call-subject-window,
 #notnowPrompt-window,
@@ -254,6 +255,12 @@ video{
 	width:400px;
 }
 
+#add-contact-window {
+	left: 35%;
+	top: 70%;
+}
+
+#add-contact-window button,
 .add-contact-div button,
 #wrongSubject button,
 #call-subject-window button,
@@ -280,6 +287,7 @@ video{
 	font-weight:bold;
 }
 
+#add-contact-window button:hover,
 #wrongSubject button:hover,
 #call-subject-window button:hover,
 #notnowPrompt-window button:hover,
@@ -514,6 +522,7 @@ ul{
 	justify-content: flex-end;
 }
 
+#add-contact-window .lightbox-btn-close,
 #wrongSubject .lightbox-btn-close,
 #call-subject-window .lightbox-btn-close,
 #notnowPrompt-window .lightbox-btn-close,

@@ -425,6 +425,18 @@ function checkCallSubject(userSubject, correctSubject) {
 	}
 }
 
+function checkPhoneNumber(numberInput) {
+	if (numberInput === "0686") {
+		//add new contact 
+		createContact(missingContact, document.getElementById("normal-contact"));
+
+		//make notif that new contact is available
+	} else {
+		openIt("wrongSubject") ;
+	}
+	closeIt("add-contact-window");
+}
+
 function openPasswordPrompt(foldername){
 	/*if the not now prompt is open, we close it*/
 	var p = document.getElementById("notnowPrompt-window") ;

@@ -94,7 +94,7 @@
 						<div id="help-contact" class="contact-list">
 						</div>
 						<div class="add-contact-div">
-							<button onclick="openIt('add-contact-window')">Add contact</button>
+							<button onclick="openIt('add-contact-window')">+ Nouveau contact</button>
 						</div>
 				</div>
 			</div>
@@ -187,6 +187,21 @@
 				<button class="window-btn" onclick="checkCallSubject(subjectInput.value, 'password')">OK</button>
 				&nbsp;&nbsp;
 				<!-- <button class="window-btn" onclick="closeIt('passPrompt-window')">ANNULER</button> -->
+			</div>
+		</div>
+
+		<!--ADD CONTACT-->
+		<div id="add-contact-window" class="hidden">
+			<div class="app-title">
+				<span class="app-title-span">Messagerie - Contact</span>
+				<button aria-label="Close" class="lightbox-btn lightbox-btn-close"  onclick="closeIt('add-contact-window')"></button>
+			</div>
+			<div class="message-content">
+				Nouveau contact <span id="folderD"></span><br/>
+				<input id="numInput" name="numInput" type="text" placeholder="Tel." value="" autocomplete="off" onkeypress="checkIfEnterSubject(event, numInput.value, 'password')" />
+				<!-- <input id="folderInput" name="folderInput" type="hidden" value="0" /> -->
+				<button class="window-btn" onclick="checkPhoneNumber(numInput.value)">OK</button>
+				&nbsp;&nbsp;
 			</div>
 		</div>
 
