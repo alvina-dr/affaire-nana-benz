@@ -122,11 +122,12 @@
 			<button class="footer-button" onclick="openIt('credit-window')">Crédits</button></div>
 	</div>
 	<div id="callVideo-window" class="hidden">
-		<div class="app-title"><span id="callVideo-title" class="app-title-span">APPEL EN COURS</span></div>
+		<div class="app-title">
+			<span id="callVideo-title" class="app-title-span">APPEL EN COURS</span>
+			<button id="btn-closecall" class="lightbox-btn lightbox-btn-close" onclick="closeVideoWindow(this.parentElement.parentElement);"></button>
+		</div>
 		<div id="callVideo-content">	
 		</div>
-		<br/>
-		<button id="btn-closecall" onclick="closeVideoWindow(this.parentElement);">FERMER</button>
 	</div>
 	<!--PASSWORD CAN'T UNLOCK NOW-->
 		<div id="notnowPrompt-window" class="hidden">

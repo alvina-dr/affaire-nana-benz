@@ -12,6 +12,7 @@ function startLighBox(){
     'use strict';
 
     let simpleDiv;
+    let windowTitle;
     let btnClose;
     let btnNav;
     let currentItem;
@@ -164,10 +165,17 @@ function startLighBox(){
 
     const build = () => {
       simpleDiv = doc.createElement("div");
-      simpleDiv.classList.add("top-line");
+      simpleDiv.classList.add("app-title");
+      
       btnClose = doc.createElement('button');
       btnClose.setAttribute('aria-label', 'Close');
       btnClose.className = classes.btn + ' ' + classes.btn + '-close';
+
+      windowTitle = doc.createElement("span");
+      windowTitle.classList.add("app-title-span");
+      windowTitle.innerHTML = element.toString().replace(/^.*[\\\/]/, '');
+
+      simpleDiv.appendChild(windowTitle);
       simpleDiv.appendChild(btnClose);
 
       content = doc.createElement('div');
@@ -219,6 +227,7 @@ function startLighBox(){
         setTimeout(() => {
           content.replaceChild(sortContent(item), content.children[0]);
           content.style.animation = animation.fadeIn;
+
         }, 200);
         currentItem.classList.remove(classes.currentElement);
         item.classList.add(classes.currentElement);
@@ -252,6 +261,7 @@ function startLighBox(){
       const key = event.keyCode;
       const type = event.type;
 
+      // windowTitle.innerHTML = target.innerHTML;
       const clickClose = type == 'click' && [container, btnClose].indexOf(target) !== -1;
       const keyupClose = type == 'keyup' && key == 27;
       if (clickClose || keyupClose) {

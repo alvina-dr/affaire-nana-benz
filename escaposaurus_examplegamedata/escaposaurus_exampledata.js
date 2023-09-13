@@ -61,7 +61,7 @@
 		var gameThanks = "Remerciements : <br/> ;)" ;
 
 		var OSName = "Nom" ;
-		var explorerName = "Drive" ;
+		var explorerName = "Réseau:/Drive" ;
 		var callerAppName = "Messagerie - Contact" ;
 
 		/*titles of video windows*/
