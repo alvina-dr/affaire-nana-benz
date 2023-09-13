@@ -103,7 +103,7 @@ video{
 	margin: 0;
 	width: 100%;
 	height: fit-content;
-	padding: 5px 0;
+	padding: 0;
 	padding-left: 3px;
 	display: flex;
 	justify-content: space-between;
@@ -185,10 +185,13 @@ video{
 	background-color: var(--xp-dark-grey);
 	border:.2em solid var(--xp-dark-blue);
 	border-radius: .5em .5em 0 0;
+	overflow: hidden;
 }
 
 #folderApp-content{
 	padding:10px;
+	padding-right: 0;
+	padding-top: 0;
 	text-align: left;
 }
 
@@ -253,6 +256,11 @@ video{
 #credit-window{
 	top:20%;
 	width:400px;
+}
+
+#call-subject-window {
+	left: 25%;
+	top: 10%;
 }
 
 #add-contact-window {
@@ -333,8 +341,9 @@ video{
 	padding-top:3px;
 	padding-bottom:3px;
 	bottom: 0;
-	text-align: left;
 	padding-left: 10px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .footer-button{
@@ -342,7 +351,7 @@ video{
 	background-color: var(--xp-light-blue);
 	border:none;
 	border-radius: .3em;
-	margin-right:1px;
+	margin-right:3px;
 	padding:5px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size:.9em;
@@ -549,8 +558,55 @@ ul{
 	transition: none;
 }
 
+#add-contact-window .lightbox-btn-close-deactivated,
+#wrongSubject .lightbox-btn-close-deactivated,
+#call-subject-window .lightbox-btn-close-deactivated,
+#notnowPrompt-window .lightbox-btn-close-deactivated,
+#passPrompt-window .lightbox-btn-close-deactivated,
+#wrongPassword .lightbox-btn-close-deactivated,
+#newContact-window .lightbox-btn-close-deactivated,
+#UIvid-window .lightbox-btn-close-deactivated,
+#callVideo-window .lightbox-btn-close-deactivated,
+#calling-window .lightbox-btn-close-deactivated,
+#message-window .lightbox-btn-close-deactivated,
+#nocall-window .lightbox-btn-close-deactivated,
+#solution-window .lightbox-btn-close-deactivated,
+#credit-window .lightbox-btn-close-deactivated,
+#overlay-index .lightbox-btn-close-deactivated,
+.lightbox-btn-close-deactivated {
+	background-color: lightsalmon; 
+	border:.2em solid var(--xp-dark-blue2);
+	cursor:default;
+}
+
+#add-contact-window .lightbox-btn-close-deactivated:hover,
+#wrongSubject .lightbox-btn-close-deactivated:hover,
+#call-subject-window .lightbox-btn-close-deactivated:hover,
+#notnowPrompt-window .lightbox-btn-close-deactivated:hover,
+#passPrompt-window .lightbox-btn-close-deactivated:hover,
+#wrongPassword .lightbox-btn-close-deactivated:hover,
+#newContact-window .lightbox-btn-close-deactivated:hover,
+#UIvid-window .lightbox-btn-close-deactivated:hover,
+#callVideo-window .lightbox-btn-close-deactivated:hover,
+#calling-window .lightbox-btn-close-deactivated:hover,
+#message-window .lightbox-btn-close-deactivated:hover,
+#nocall-window .lightbox-btn-close-deactivated:hover,
+#solution-window .lightbox-btn-close-deactivated:hover,
+#credit-window .lightbox-btn-close-deactivated:hover,
+#overlay-index .lightbox-btn-close-deactivated:hover,
+.lightbox-btn-close-deactivated:hover {
+	background-color: lightsalmon; 
+	border:.2em solid var(--xp-dark-blue2);
+	cursor:default;
+}
 
 /*ADDED COMPLETELY*/
 .add-contact-div {
 	padding: 10px 0;
+}
+
+#date_heure {
+	color: white;
+	align-self: center;
+	margin-right: 10px;
 }

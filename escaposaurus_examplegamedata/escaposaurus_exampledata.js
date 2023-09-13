@@ -35,10 +35,14 @@
 		var udiskData =
 	  	{"root":{
 	  		"folders":
-		  		[{"foldername":"affaire-nana-benz", "password":"1323","sequence":0,
+		  		[{"foldername":"affaire-nana-benz", "password":"peau de léopard","sequence":0,
 				  	"files":["exemple.pdf"], // liste tissus
 					"folders":[
 						{"foldername":"références-motifs",
+						"folders": [{
+							"foldername":"Best_sellers",
+							"files":["Best_seller_1.png", "Best_seller_2.png", "Best_seller_3.png", "Best_seller_4.png", "Best_seller_5.png"]
+						}],
 							"files":["idgps.png", "catalogue.png", "best-seller.png"], //les images des motifs qui se vendent le plus
 						},
 
@@ -51,7 +55,7 @@
 					]
 				}],
 			"files":[
-				"Liste_motifs.png", "video.mp4"]}
+				"Lettre_Mme_Creppy.png"]}
 		} ;
 
 		var gameTitle = "Escaposaurus Scenario Exemple" ;
