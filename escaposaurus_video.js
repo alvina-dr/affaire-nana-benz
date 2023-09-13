@@ -358,6 +358,8 @@ function unlockFolder(unlockedFolder){
 
 	/*opening a folder change the sequence, the content here is linear*/
 	changingSequence() ;
+
+	sendNotification("Dossier débloqué : " + unlockFolder.name);
 }
 
 function isItPasswordProtected(foldername){
@@ -430,10 +432,9 @@ function checkCallSubject(userSubject) {
 function checkPhoneNumber(numberInput) {
 	var numberInputCleared = numberInput.replace(/[^a-z0-9]/gi, '') ;
 
-	if (numberInputCleared === "0686".replace(/[^a-z0-9]/gi, '')) {
+	if (numberInputCleared === "0686".replace(/[^a-z0-9]/gi, '') && document.getElementById("divcontact-"+missingContact.vid) === null) {
 		createContact(missingContact, document.getElementById("normal-contact"));
 		sendNotification("Contact ajouté : " + missingContact.username);
-		//make notif that new contact is available
 	} else {
 		openIt("wrongSubject") ;
 	}
@@ -704,5 +705,7 @@ function sendNotification(content) {
 	div.children[1].innerHTML = content;
 	console.log(div.children);
 	openIt("notification-popup");
-
+    setTimeout(function () {
+        closeIt("notification-popup");
+    }, 4000);
 }
