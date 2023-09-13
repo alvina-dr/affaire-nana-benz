@@ -51,7 +51,7 @@
 					]
 				}],
 			"files":[
-				"Liste_motifs.png"]}
+				"Liste_motifs.png", "video.mp4"]}
 		} ;
 
 		var gameTitle = "Escaposaurus Scenario Exemple" ;
@@ -97,12 +97,12 @@
 	their img need to be placed in their video folder, username is their displayed name
 		*/
 		var normalContacts = [] ;
-		normalContacts[0] = {"vid" : "Denise", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "denise_avatar.jpg"} ;
-		normalContacts[1] = {"vid" : "Nathalie", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "nata_avatar.jpg"} ;
+		normalContacts[0] = {"vid" : "Denise", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "denise_avatar.jpg", "subjectChoice": false} ;
+		normalContacts[1] = {"vid" : "Nathalie", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "nata_avatar.jpg", "subjectChoice": true} ;
 
 		/*second part of the list, contact that can help the player*/
 		var helperContacts = [] ;
-		helperContacts[0] = {"vid" : "Albert", "vod_folder" : "", "username" : "Albert (pour avoir un indice)", "canal" : "txt", "avatar" : "albert.png", "bigAvatar" : "albertbig.png"} ;
+		helperContacts[0] = {"vid" : "Albert", "vod_folder" : "", "username" : "Albert (pour avoir un indice)", "canal" : "txt", "avatar" : "albert.png", "bigAvatar" : "albertbig.png", "subjectChoice": false} ;
 		/*helperContacts[1] = {"vid" : "Lou", "username" : "Lou (pour avoir un deuxième indice) - par message", "canal" : "txt", "avatar" : "Lou_opt.jpg", "bigAvatar" : "avatarHelper2Big.gif"} ;*/
 
 
