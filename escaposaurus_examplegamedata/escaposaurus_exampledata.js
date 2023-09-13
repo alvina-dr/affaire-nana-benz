@@ -38,18 +38,20 @@
 		  		[{"foldername":"affaire-nana-benz", "password":"1323","sequence":0,
 				  	"files":["exemple.pdf"], // liste tissus
 					"folders":[
-						{"foldername":"best-seller", 
-					  		"files":["idgps.png"],"sequence":3}, //les images des motifs qui se vendent le plus
-						{"foldername":"preuves", 
-							"files":["idgps.png"],"password":"wandfluehorn","sequence":3}, //chaque preuve que l'on peut débloquer
+						{"foldername":"références-motifs",
+							"files":["idgps.png", "catalogue.png", "best-seller.png"], //les images des motifs qui se vendent le plus
+						},
+
 						{"foldername":"jugement-passés", 
-							"files":["idgps.png"],"sequence":3}, //chaque preuve que l'on peut débloquer
+							"files":["idgps.png"],"sequence":3}, 
 						{"foldername":"ventes-hollandaises", 
-							"files":["idgps.png"],"sequence":3}, //chaque preuve que l'on peut débloquer
+							"files":["idgps.png"],"sequence":3}, 
+							{"foldername":"preuves", 
+							"files":["idgps.png"],"password":"wandfluehorn","sequence":3}, //chaque preuve que l'on peut débloquer
 					]
 				}],
 			"files":[
-				"exemple.pdf"]}
+				"Liste_motifs.png"]}
 		} ;
 
 		var gameTitle = "Escaposaurus Scenario Exemple" ;
@@ -95,9 +97,8 @@
 	their img need to be placed in their video folder, username is their displayed name
 		*/
 		var normalContacts = [] ;
-		normalContacts[0] = {"vid" : "Denise", "vod_folder" : "", "username" : "Bedroom", "canal" : "video", "avatar" : "denise_avatar.jpg"} ;
-		normalContacts[1] = {"vid" : "Nathalie", "vod_folder" : "", "username" : "Living room", "canal" : "video", "avatar" : "nata_avatar.jpg"} ;
-		normalContacts[2] = {"vid" : "Nathalie", "vod_folder" : "", "username" : "Garage", "canal" : "video", "avatar" : "nata_avatar.jpg"} ;
+		normalContacts[0] = {"vid" : "Denise", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "denise_avatar.jpg"} ;
+		normalContacts[1] = {"vid" : "Nathalie", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "nata_avatar.jpg"} ;
 
 		/*second part of the list, contact that can help the player*/
 		var helperContacts = [] ;

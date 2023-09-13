@@ -153,7 +153,10 @@
 
 	<!-- WRONG PASSWORD MSG -->
 		<div id="wrongPassword" class="hidden">
-			<div class="app-title"><span class="app-title-span">:(</span></div>
+			<div class="app-title">
+				<span class="app-title-span">:(</span>			
+				<button aria-label="Close" class="lightbox-btn lightbox-btn-close"></button>
+			</div>
 			<div class="message-content">
 				<br/>
 				Mauvais mot de passe<br/>
@@ -164,7 +167,10 @@
 
 	<!-- NOUVEAU CONTACT -->
 	<div id="newContact-window" class="hidden">
-		<div class="app-title"><span class="app-title-span">MESSAGE</span></div>
+		<div class="app-title">
+			<span class="app-title-span">MESSAGE</span>
+			<button aria-label="Close" class="lightbox-btn lightbox-btn-close"></button>
+		</div>
 		<div class="message-content">
 			<br/>
 			<span id="added"></span><br/>
@@ -175,7 +181,10 @@
 
 	<!-- APPEL ENTRANT -->
 	<div id="calling-window" class="hidden">
-		<div class="app-title"><span class="app-title-span">Appel entrant</span></div>
+		<div class="app-title">
+			<span class="app-title-span">Appel entrant</span>
+			<!-- <button aria-label="Close" class="lightbox-btn lightbox-btn-close"></button> -->
+		</div>
 		<div class="message-content">
 			<img id="callerIMG" />
 			<br/>
@@ -187,7 +196,10 @@
 
 	<!-- MESSAGE DE LOU -->
 	<div id="message-window" class="hidden">
-		<div class="app-title"><span class="app-title-span">MESSAGE</span></div>
+		<div class="app-title">
+			<span class="app-title-span">MESSAGE</span>
+			<button aria-label="Close" class="lightbox-btn lightbox-btn-close"></button>
+		</div>
 		<div class="message-content">
 			<img  id="caller2IMG" /><br/>
 			<span id="tips-content"></span><br/>
@@ -197,7 +209,10 @@
 
 	<!-- MESSAGE PAS CALL -->
 	<div id="nocall-window" class="hidden">
-		<div class="app-title"><span class="app-title-span">...</span></div>
+		<div class="app-title">
+			<span class="app-title-span">...</span>
+			<button aria-label="Close" class="lightbox-btn lightbox-btn-close"></button>
+		</div>
 		<div class="message-content">
 			Appel impossible pour le moment<br/>
 			<button class="window-btn" onclick="closeIt('nocall-window')">Fermer</button>
@@ -206,7 +221,10 @@
 
 	<!-- SOLUTION -->
 	<div id="solution-window" class="hidden">
-		<div class="app-title"><span class="app-title-span">AIDE / SOLUTION</span></div>
+		<div class="app-title">
+			<span class="app-title-span">AIDE / SOLUTION</span>
+			<button aria-label="Close" class="lightbox-btn lightbox-btn-close" onclick="solutionClose('tips','spoiler', 'solution-window')"></button>
+		</div>
 		<div class="message-content">
 			<button class="window-btn" onclick="instructionReveal('tips')">Cliquer pour savoir quoi faire à cette étape</button>
 			<br/>
@@ -217,13 +235,15 @@
 			<br/>
 				<span id="spoiler" class="hidden"></span>
 			<br/>
-			<button class="window-btn" onclick="solutionClose('tips','spoiler', 'solution-window')">Fermer</button>
+			<!-- <button class="window-btn" >Fermer</button> -->
 		</div>
 	</div>
 
 	<!-- CREDIT -->
 	<div id="credit-window" class="hidden">
-		<div class="app-title"><span class="app-title-span">CREDITS</span></div>
+		<div class="app-title"><span class="app-title-span">CREDITS</span>
+			<button aria-label="Close" class="lightbox-btn lightbox-btn-close" onclick="closeIt('credit-window')"></button>
+		</div>
 		<div class="message-content">
 			<span id="game-credit"></span>
 			<br/><br/>
@@ -236,7 +256,7 @@
 			Téléchargeable sur <a href="https://github.com/RedNaK/escaposaurus/" target="_blank">GitHub</a><br/>
 			Licence du code source : MIT<br/>
 			<br/>
-			<button class="window-btn" onclick="closeIt('credit-window')">Fermer</button>
+			<!-- <button class="window-btn" >Fermer</button> -->
 		</div>
 	</div>
 	
@@ -248,6 +268,7 @@
 				<span id="home-gameDescription"></span><br/><br/><br/><br/>
 				<div id="div-homeMission">
 					<h3 id="home-mission"></h3>
+					<img src="escaposaurus_examplegamedata/img/1200px-Microsoft_Windows_XP.png" style="width: 30%;">
 					<video id="vid-overlay" controls="true" autoplay="true" src="" style="text-align:center;max-width:750px;"></video>
 					<br/><br/>
 					<button id="overlay-btn" class="window-btn" onclick="closeOverlay('overlay-index')"></btn>

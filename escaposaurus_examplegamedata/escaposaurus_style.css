@@ -69,14 +69,13 @@ video{max-width: 960px;}
 
 #container-homeMission{
 	width:800px;
-	background-color:white;
+	background-color:transparent;
 	margin-top:20px;
 	padding-bottom:20px;
 }
 
 #div-homeMission{
-	background-color:#dcdcdc;
-	border:2px solid #1022CC;
+	background-color:transparent;
 	padding:5px;
 }
 
@@ -197,8 +196,8 @@ video{max-width: 960px;}
 	top:0%;
 	width:100%;
 	height:100%;
-	border:.2em solid var(--xp-dark-blue);
-	background-color:var(--xp-dark-grey);
+	background-color:black;
+	color: white;
 	text-align: center;
 }
 
@@ -266,7 +265,7 @@ video{max-width: 960px;}
 #overlay-index button{
 	/*INTERACTION BUTTON*/
 	color:#fff;
-	background-color: #1022CC;
+	background-color:var(--xp-light-blue);
 	border: none;
 	padding:3px;
 	margin:3px;
@@ -501,7 +500,18 @@ ul{
 	justify-content: flex-end;
 }
 
-#callVideo-window button,
+#notnowPrompt-window .lightbox-btn-close,
+#passPrompt-window .lightbox-btn-close,
+#wrongPassword .lightbox-btn-close,
+#newContact-window .lightbox-btn-close,
+#UIvid-window .lightbox-btn-close,
+#callVideo-window .lightbox-btn-close,
+#calling-window .lightbox-btn-close,
+#message-window .lightbox-btn-close,
+#nocall-window .lightbox-btn-close,
+#solution-window .lightbox-btn-close,
+#credit-window .lightbox-btn-close,
+#overlay-index .lightbox-btn-close,
 .lightbox-btn-close {
 	background-color: red;
 	/* border-radius: 0 .5em 0 0; */
