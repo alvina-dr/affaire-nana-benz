@@ -156,7 +156,6 @@
 				<input id="folderInput" name="folderInput" type="hidden" value="0" />
 				<button class="window-btn" onclick="checkPassword(passwordInput.value, folderInput.value)">OK</button>
 				&nbsp;&nbsp;
-				<!-- <button class="window-btn" onclick="closeIt('passPrompt-window')">ANNULER</button> -->
 			</div>
 		</div>
 
@@ -182,9 +181,9 @@
 			</div>
 			<div class="message-content">
 				Sujet de conversation ? <span id="folderD"></span><br/>
-				<input id="subjectInput" name="subjectInput" type="text" placeholder="De quoi parler ?" value="" autocomplete="off" onkeypress="checkIfEnter(event, subjectInput.value, 'password', 'checkCallSubject')" />
+				<input id="subjectInput" name="subjectInput" type="text" placeholder="De quoi parler ?" value="" autocomplete="off" onkeypress="checkIfEnter(event, subjectInput.value, '', 'checkCallSubject')" />
 				<!-- <input id="folderInput" name="folderInput" type="hidden" value="0" /> -->
-				<button class="window-btn" onclick="checkCallSubject(subjectInput.value, 'password')">OK</button>
+				<button class="window-btn" onclick="checkCallSubject(subjectInput.value)">OK</button>
 				&nbsp;&nbsp;
 				<!-- <button class="window-btn" onclick="closeIt('passPrompt-window')">ANNULER</button> -->
 			</div>

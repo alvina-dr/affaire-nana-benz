@@ -414,23 +414,23 @@ function checkPassword(userTry, foldername){
 	}
 }
 
-function checkCallSubject(userSubject, correctSubject) {
+function checkCallSubject(userSubject) {
 	var userTryClearedSubject = userSubject.replace(/[^a-z0-9]/gi, '') ;
-	var passwordClearedSubject = correctSubject.replace(/[^a-z0-9]/gi, '') ;
-	if(userTryClearedSubject.toLowerCase() == passwordClearedSubject.toLowerCase()){
+
+	if (userTryClearedSubject === 'password'.replace(/[^a-z0-9]/gi, '')) {
 		mainHintFound = true;
 		openVideoWindow('Nathalie', './escaposaurus_examplegamedata/videos/contactVideo/Nathalie/', false)
 		closeIt("call-subject-window");
-		return true;
-	}else{
+	} else {
 		closeIt("call-subject-window");
 		openIt("wrongSubject") ;
-		return false;
 	}
 }
 
 function checkPhoneNumber(numberInput) {
-	if (numberInput === "0686") {
+	var numberInputCleared = numberInput.replace(/[^a-z0-9]/gi, '') ;
+
+	if (numberInputCleared === "0686".replace(/[^a-z0-9]/gi, '')) {
 		createContact(missingContact, document.getElementById("normal-contact"));
 		//make notif that new contact is available
 	} else {
