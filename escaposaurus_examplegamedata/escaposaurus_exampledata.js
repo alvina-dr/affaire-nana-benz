@@ -89,7 +89,7 @@
 		/*if you put "none" or anything that is not an existing filename, the player will NOT be able to call the contacts during this sequence*/
 		var seqMainHint = [] ;
 		seqMainHint[0] = "video.mp4" ;
-		seqMainHint[1] = "aucun" ; /*if you put anything that is not an existing filename of the udisk, the player will never be able to call any contacts or get helps during this sequence*/
+		seqMainHint[1] = "catalogue.png" ; /*if you put anything that is not an existing filename of the udisk, the player will never be able to call any contacts or get helps during this sequence*/
 		seqMainHint[2] = "aucun" ;
 		seqMainHint[3] = "swisstopo-screen.png" ;
 
@@ -97,8 +97,8 @@
 	their img need to be placed in their video folder, username is their displayed name
 		*/
 		var normalContacts = [] ;
-		normalContacts[0] = {"vid" : "Denise", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "denise_avatar.jpg", "subjectChoice": false} ;
-		normalContacts[1] = {"vid" : "Nathalie", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "nata_avatar.jpg", "subjectChoice": true} ;
+		normalContacts[0] = {"vid" : "Avocat", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "denise_avatar.jpg", "subjectChoice": false} ;
+		normalContacts[1] = {"vid" : "Prof", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "nata_avatar.jpg", "subjectChoice": true} ;
 
 		/*second part of the list, contact that can help the player*/
 		var helperContacts = [] ;
