@@ -313,7 +313,6 @@ function createContact(contact, parent){
 	x.classList.add("contact-div") ;
 	x.classList.add("no-call") ;
 
-	console.log("choice is :" + contact.subjectChoice);
 	/*NK ICI SI TXT OU PAS*/
 	if(contact.canal == "video"){
 		if(isLocal === true){
@@ -415,17 +414,13 @@ function checkCallSubject(userSubject, correctSubject) {
 	var userTryClearedSubject = userSubject.replace(/[^a-z0-9]/gi, '') ;
 	var passwordClearedSubject = correctSubject.replace(/[^a-z0-9]/gi, '') ;
 	if(userTryClearedSubject.toLowerCase() == passwordClearedSubject.toLowerCase()){
-		//launch francis subject
 		mainHintFound = true;
 		openVideoWindow('Nathalie', './escaposaurus_examplegamedata/videos/contactVideo/Nathalie/', false)
 		closeIt("call-subject-window");
-		console.log("CORRECT");
 		return true;
 	}else{
-		console.log("NOT INTERESTED");
 		closeIt("call-subject-window");
 		openIt("wrongSubject") ;
-		//say that francis is not interested
 		return false;
 	}
 }
@@ -519,7 +514,6 @@ function openVideoWindow(vid, vid_folder, subjectChoice){
 			document.getElementById('divcontact-'+vid).classList.add("already-called") ;
 		}else{
 			/*no call, because main clue not opened, display of message*/
-			console.log("this subject choice is : " + subjectChoice);
 			if (subjectChoice === 'true')  {
 				document.getElementById("subjectInput").value = "" ;
 				openIt('call-subject-window');
