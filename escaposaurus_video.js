@@ -432,6 +432,7 @@ function checkPhoneNumber(numberInput) {
 
 	if (numberInputCleared === "0686".replace(/[^a-z0-9]/gi, '')) {
 		createContact(missingContact, document.getElementById("normal-contact"));
+		sendNotification("Contact ajouté : " + missingContact.username);
 		//make notif that new contact is available
 	} else {
 		openIt("wrongSubject") ;
@@ -696,4 +697,12 @@ function solutionClose(iid, spid, spwin){
 	var sp = document.getElementById(spid) ;
 	sp.innerHTML = "" ;
 	closeIt(spwin) ;
+}
+
+function sendNotification(content) {
+	var div = document.getElementById("notification-popup");
+	div.children[1].innerHTML = content;
+	console.log(div.children);
+	openIt("notification-popup");
+
 }

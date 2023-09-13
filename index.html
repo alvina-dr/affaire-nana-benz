@@ -87,13 +87,14 @@
 							<span class="app-title-span" id="callerApp-name"></span>
 							<button id="btn-closecall" class="lightbox-btn lightbox-btn-close lightbox-btn-close-deactivated"></button>
 						</div>
-						<div id="callApp-prompt"></div>
+						<div id="callApp-prompt" style="display: none;"></div>
 						<div id="normal-contact" class="contact-list">
 						</div>
-						<div id="callApp-help">
+						<!-- <div id="callApp-help">
 							Si besoin d'aide et d'indice pour trouver un mot de passe.
-						</div>
-						<div id="help-contact" class="contact-list">
+						</div> -->
+						<hr>
+						<div id="help-contact" class="contact-list" style="display: none;">
 						</div>
 						<div class="add-contact-div">
 							<button onclick="openIt('add-contact-window')">+ Nouveau contact</button>
@@ -320,6 +321,15 @@
 			<br/>
 			<!-- <button class="window-btn" >Fermer</button> -->
 		</div>
+	</div>
+
+	<!--NOTIFICATION-->
+	<div id="notification-popup" class="div-column">
+		<div class="div-row" style=" width: 100%; justify-content: space-between;">
+			<p><b>Notification</b></p>
+			<button aria-label="Close" class="lightbox-btn lightbox-btn-close" onclick="closeIt('notification-popup')"></button>
+		</div>
+		<p>New contact added.</p>
 	</div>
 	
 	<!-- overlay index du jeu-->

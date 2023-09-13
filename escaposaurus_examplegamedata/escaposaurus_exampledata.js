@@ -102,11 +102,10 @@
 		*/
 		var normalContacts = [] ;
 		normalContacts[0] = {"vid" : "Avocat", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "denise_avatar.jpg", "subjectChoice": false} ;
-		normalContacts[1] = {"vid" : "Prof", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "nata_avatar.jpg", "subjectChoice": true} ;
+		normalContacts[1] = {"vid" : "Albert", "vod_folder" : "", "username" : "Albert (appeler si besoin d'aide!!!)", "canal" : "txt", "avatar" : "albert.png", "bigAvatar" : "albertbig.png", "subjectChoice": false} ;
 
 		/*second part of the list, contact that can help the player*/
 		var helperContacts = [] ;
-		helperContacts[0] = {"vid" : "Albert", "vod_folder" : "", "username" : "Albert (pour avoir un indice)", "canal" : "txt", "avatar" : "albert.png", "bigAvatar" : "albertbig.png", "subjectChoice": false} ;
 		/*helperContacts[1] = {"vid" : "Lou", "username" : "Lou (pour avoir un deuxième indice) - par message", "canal" : "txt", "avatar" : "Lou_opt.jpg", "bigAvatar" : "avatarHelper2Big.gif"} ;*/
 
 
@@ -114,7 +113,7 @@
 		finalStepAdded = "ID du GPS transmise aux secours." ;
 
 		/*the last call, it can be the person we find in the end or anyone else we call to end the quest, allows the game to know it is the final contact that is called and to proceed with the ending*/
-		var missingContact = {"vid" : "missing", "vod_folder" : "","username" : "Nathalie",  "canal" : "video", "avatar" : "nata_avatar.jpg"} ;
+		var missingContact = {"vid" : "Prof", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "nata_avatar.jpg", "subjectChoice": true} ;
 
 		/*Lou only send text message, they are stored here*/
 		var tips = {} ;

@@ -21,6 +21,7 @@ body{
 	--xp-dark-blue : #2260da;
 	--xp-dark-grey : #ece9d8;
 	--xp-light-grey : #c0d4f6;
+	--xp-yellow : #ffffde;
 }
 
 /*on veut la lightbox devant*/
@@ -118,12 +119,12 @@ video{
 
 /*call app*/
 #callApp{
-	width:100%;
+	width:80%;
 	max-width: 600px;
 	height:auto;
 	padding:0;
 	margin: auto;
-	margin-top: 30vh;
+	margin-top: 55vh;
 	background-color: var(--xp-dark-grey);
 	border:.2em solid var(--xp-dark-blue);
 	border-radius: .5em .5em 0 0;
@@ -609,4 +610,47 @@ ul{
 	color: white;
 	align-self: center;
 	margin-right: 10px;
+	text-shadow: black 0px 1px;
+}
+
+#notification-popup {
+	position: absolute;
+	z-index: 300;
+	display: flex;
+	width: 25vw;
+	right: 1vh;
+	bottom: 5vh;
+	border:.1em solid grey;
+	border-radius: .5em;
+	height: fit-content;
+	background-color: var(--xp-yellow);
+	padding: 5px;
+	transition: .3s;
+}
+
+#notification-popup  .lightbox-btn-close
+{
+	width: 2em;
+	scale: .7;
+	filter: invert(43%) sepia(3%) saturate(18%) hue-rotate(350deg) brightness(93%) contrast(80%);
+	background-color: rgba(255, 255, 255, 0.338); 
+	border:.1em solid grey;
+	border-radius: 3px;
+	cursor:default;
+}
+
+.div-row {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+}
+
+.div-column {
+	display: flex;
+	flex-direction: column;
+}
+
+hr {
+	margin: 0 10px;
+	border-top: 2px solid rgba(170, 170, 170, 0.601);
 }
