@@ -88,7 +88,7 @@
 		/*if you put in the string "noHint", player will be able to immediatly call the contact at the beginning of the sequence*/
 		/*if you put "none" or anything that is not an existing filename, the player will NOT be able to call the contacts during this sequence*/
 		var seqMainHint = [] ;
-		seqMainHint[0] = "scan_memo.png" ;
+		seqMainHint[0] = "video.mp4" ;
 		seqMainHint[1] = "aucun" ; /*if you put anything that is not an existing filename of the udisk, the player will never be able to call any contacts or get helps during this sequence*/
 		seqMainHint[2] = "aucun" ;
 		seqMainHint[3] = "swisstopo-screen.png" ;

@@ -313,15 +313,16 @@ function createContact(contact, parent){
 	x.classList.add("contact-div") ;
 	x.classList.add("no-call") ;
 
+	console.log("choice is :" + contact.subjectChoice);
 	/*NK ICI SI TXT OU PAS*/
 	if(contact.canal == "video"){
 		if(isLocal === true){
-			x.setAttribute("onclick","openVideoWindow('"+contact.vid+"', '"+contactVideoRoot+contact.vid+"/')") ;
+			x.setAttribute("onclick","openVideoWindow('"+contact.vid+"', '"+contactVideoRoot+contact.vid+"/', '"+contact.subjectChoice+"')") ;
 		}else{
 			x.setAttribute("onclick","openVideoWindow('"+contact.vid+"', '"+videoRootVOD+"/"+contact.vod_folder+"')") ;
 		}
 	}else if(contact.canal == "txt"){
-		x.setAttribute("onclick","openContactTxTWindow('"+contact.vid+"', '"+contactVideoRoot+contact.vid+"/"+contact.bigAvatar+"')") ;
+		x.setAttribute("onclick","openContactTxTWindow('"+contact.vid+"', '"+contactVideoRoot+contact.vid+"/"+contact.bigAvatar+"', '"+contact.subjectChoice+"')") ;
 	}
 
 	var im = document.createElement("img") ;
@@ -389,7 +390,16 @@ function checkIfEnter(e, userTry, foldername){
 	}
 }
 
+function checkIfEnterSubject(e, userSubject, correctSubject) {
+	if(e.keyCode === 13){
+	    e.preventDefault(); // Ensure it is only this code that runs
+
+	    checkCallSubject(userSubject,  correctSubject);
+	}
+}
+
 function checkPassword(userTry, foldername){
+
 	TinyStato.logThis(14, "triedpassword", userTry, sequenceNumber) ;
 
 	if(doThePasswordMatch(userTry, foldername)){
@@ -398,6 +408,25 @@ function checkPassword(userTry, foldername){
 	}else{
 		closeIt("passPrompt-window") ;
 		openIt("wrongPassword") ;
+	}
+}
+
+function checkCallSubject(userSubject, correctSubject) {
+	var userTryClearedSubject = userSubject.replace(/[^a-z0-9]/gi, '') ;
+	var passwordClearedSubject = correctSubject.replace(/[^a-z0-9]/gi, '') ;
+	if(userTryClearedSubject.toLowerCase() == passwordClearedSubject.toLowerCase()){
+		//launch francis subject
+		mainHintFound = true;
+		openVideoWindow('Nathalie', './escaposaurus_examplegamedata/videos/contactVideo/Nathalie/', false)
+		closeIt("call-subject-window");
+		console.log("CORRECT");
+		return true;
+	}else{
+		console.log("NOT INTERESTED");
+		closeIt("call-subject-window");
+		openIt("wrongSubject") ;
+		//say that francis is not interested
+		return false;
 	}
 }
 
@@ -463,7 +492,7 @@ function openContactTxTWindow(vid, bigAvatarHelper){
 }
 
 /*open/close video windows*/
-function openVideoWindow(vid, vid_folder){
+function openVideoWindow(vid, vid_folder, subjectChoice){
 	var x = document.getElementById("callVideo-content") ;
 	var t = document.getElementById("callVideo-title") ;
 	
@@ -480,7 +509,7 @@ function openVideoWindow(vid, vid_folder){
 		title = titleData.callTitle ;
 		src = missingVideoPath ;
 
-		/*add listerner to launch the end of the game when player close this video*/
+		/*add listener to launch the end of the game when player close this video*/
 		var cl = document.getElementById("btn-closecall") ;
 		cl.addEventListener("click", callbackCloseMissingCall) ;
 	}else{
@@ -490,7 +519,15 @@ function openVideoWindow(vid, vid_folder){
 			document.getElementById('divcontact-'+vid).classList.add("already-called") ;
 		}else{
 			/*no call, because main clue not opened, display of message*/
-			openIt('nocall-window') ;
+			console.log("this subject choice is : " + subjectChoice);
+			if (subjectChoice === 'true')  {
+				document.getElementById("subjectInput").value = "" ;
+				openIt('call-subject-window');
+			}
+			else {
+				console.log("no choice window");
+				openIt('nocall-window') ;
+			}
 			return;
 		}
 	}

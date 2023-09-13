@@ -28,7 +28,10 @@ body{
 	z-index:302;
 }
 
-video{max-width: 960px;}
+video{
+	max-width: 80vw;
+	max-height: 70vh;
+}
 
 @font-face {
     font-family: Roboto;
@@ -215,6 +218,8 @@ video{max-width: 960px;}
 	text-align: center;
 }
 
+#wrongSubject,
+#call-subject-window,
 #notnowPrompt-window,
 #passPrompt-window,
 #wrongPassword,
@@ -249,8 +254,9 @@ video{max-width: 960px;}
 	width:400px;
 }
 
-
-
+.add-contact-div button,
+#wrongSubject button,
+#call-subject-window button,
 #notnowPrompt-window button,
 #passPrompt-window button,
 #wrongPassword button,
@@ -274,6 +280,8 @@ video{max-width: 960px;}
 	font-weight:bold;
 }
 
+#wrongSubject button:hover,
+#call-subject-window button:hover,
 #notnowPrompt-window button:hover,
 #passPrompt-window button:hover,
 #wrongPassword button:hover,
@@ -506,6 +514,8 @@ ul{
 	justify-content: flex-end;
 }
 
+#wrongSubject .lightbox-btn-close,
+#call-subject-window .lightbox-btn-close,
 #notnowPrompt-window .lightbox-btn-close,
 #passPrompt-window .lightbox-btn-close,
 #wrongPassword .lightbox-btn-close,
@@ -528,4 +538,10 @@ ul{
 	top: 0;
 	right: 0;
 	transition: none;
+}
+
+
+/*ADDED COMPLETELY*/
+.add-contact-div {
+	padding: 10px 0;
 }
