@@ -35,7 +35,7 @@
 		var udiskData =
 	  	{"root":{
 	  		"folders":
-		  		[{"foldername":"affaire-nana-benz", "password":"peau de léopard","sequence":0,
+		  		[{"foldername":"Affaire_Nana_Benz", "password":"peau de léopard","sequence":0,
 				  	"files":["Coupure_presse.png", "Historique_des_ventes.png", "Memo_contacts.png"],
 					"folders":[
 						{"foldername":"Références_motifs",
@@ -114,7 +114,7 @@
 		finalStepAdded = "ID du GPS transmise aux secours." ;
 
 		/*the last call, it can be the person we find in the end or anyone else we call to end the quest, allows the game to know it is the final contact that is called and to proceed with the ending*/
-		var missingContact = {"vid" : "Prof", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "prof_avatar.jpg", "subjectChoice": true} ;
+		var missingContact = {"vid" : "Prof", "vod_folder" : "Prof", "username" : "Prof. Francis", "canal" : "video", "avatar" : "prof_avatar.jpg", "subjectChoice": true} ;
 
 		/*Lou only send text message, they are stored here*/
 		var tips = {} ;
