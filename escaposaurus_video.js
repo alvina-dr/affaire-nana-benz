@@ -18,6 +18,7 @@ var sequenceNumber = 0 ;
 var winState = false ;
 var mainHintFound = false ;
 var gameStart = false ;
+var customCall = ""
 
 
 /*
@@ -426,9 +427,10 @@ function checkCallSubject(userSubject) {
 
 	if (userTryClearedSubject === '27'.replace(/[^a-z0-9]/gi, '')) {
 		// mainHintFound = true;
-		openVideoWindow('Prof', './escaposaurus_examplegamedata/videos/contactVideo/Prof/', false, 4)
+		openVideoWindow('Prof', './escaposaurus_examplegamedata/videos/contactVideo/Prof/', false, 11);
 		closeIt("call-subject-window");
 	} else {
+		//first time call video 10
 		closeIt("call-subject-window");
 		openIt("wrongSubject") ;
 	}
@@ -606,7 +608,7 @@ function changingSequence(){
 
 	if(sequenceNumber >= sequenceWin){
 		TinyStato.logThis(2, "win", "", sequenceNumber) ;
-		unlockContacts() ;
+		// unlockContacts() ;
 		win() ;
 	}else{
 		TinyStato.logThis(3, "newsequence", "", sequenceNumber) ;
@@ -615,6 +617,13 @@ function changingSequence(){
 		if(seqMainHint[sequenceNumber] == "noHint"){
 			mainHintFound = true ;
 			unlockContacts() ;
+		}
+		if(sequenceNumber===2) {
+			openIt("calling-window");
+			customCall = "callAvocatToilettes";
+		} else if (sequenceNumber === 3) {
+			openIt("calling-window");
+			customCall = "callBureau";
 		}
 	}
 
@@ -637,14 +646,23 @@ function win(){
 
 function closeNewContact(d){
 	closeIt(d) ;
-	var nc = document.getElementById("normal-contact") ;
-	createContact(missingContact, nc) ;
+	openIt("calling-window");
+	// var nc = document.getElementById("normal-contact") ;
+	// createContact(missingContact, nc) ;
 }
 
 function closeAppelEntrant(d){
 	closeIt(d) ;
 
-	if(winState === false){
+	if(customCall === "callAvocatToilettes") {
+		openVideoWindow('Avocat', './escaposaurus_examplegamedata/videos/contactVideo/Avocat/', false, 2);
+		customCall = "";
+		//add historique judiciaire
+	} else if (customCall === "callBureau") {
+		openVideoWindow('Avocat', './escaposaurus_examplegamedata/videos/contactVideo/Avocat/', false, 3);
+		customCall = "";
+	} 
+	 else if (winState === false) {
 		openVideoWindow('intro') ;
 	}else{
 		openEpilogue() ;

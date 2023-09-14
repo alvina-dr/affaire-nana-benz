@@ -93,17 +93,17 @@
 		/*if you put in the string "noHint", player will be able to immediatly call the contact at the beginning of the sequence*/
 		/*if you put "none" or anything that is not an existing filename, the player will NOT be able to call the contacts during this sequence*/
 		var seqMainHint = [] ;
-		seqMainHint[0] = "video.mp4" ;
-		seqMainHint[1] = "catalogue.png" ; /*if you put anything that is not an existing filename of the udisk, the player will never be able to call any contacts or get helps during this sequence*/
+		seqMainHint[0] = "" ;
+		seqMainHint[1] = "Best_seller_5.jpg" ; /*if you put anything that is not an existing filename of the udisk, the player will never be able to call any contacts or get helps during this sequence*/
 		seqMainHint[2] = "aucun" ;
-		seqMainHint[3] = "swisstopo-screen.png" ;
+		seqMainHint[3] = "" ;
 
 		/*contact list, vid is the name of their folder in the videoContact folder, then the game autoload the video named seq%number of the current sequence%, e.g. seq0.MP4 for the first sequence (numbered 0 because computer science habits)
 	their img need to be placed in their video folder, username is their displayed name
 		*/
 		var normalContacts = [] ;
-		normalContacts[0] = {"vid" : "Avocat", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "avocat_avatar.jpg", "subjectChoice": false} ;
-		normalContacts[1] = {"vid" : "JP", "vod_folder" : "", "username" : "JP (sms si besoin d'aide!!!)", "canal" : "txt", "avatar" : "jp_avatar.jpg", "bigAvatar" : "albertbig.png", "subjectChoice": false} ;
+		normalContacts[0] = {"vid" : "Avocat", "vod_folder" : "", "username" : "Maître De Villiers", "canal" : "video", "avatar" : "avocat_avatar.jpg", "subjectChoice": false} ;
+		normalContacts[1] = {"vid" : "JP", "vod_folder" : "", "username" : "JP (sms pour indice!!!)", "canal" : "txt", "avatar" : "jp_avatar.jpg", "bigAvatar" : "jp_avatar.jpg", "subjectChoice": false} ;
 
 		/*second part of the list, contact that can help the player*/
 		var helperContacts = [] ;
@@ -111,7 +111,7 @@
 
 
 		/*ce qui apparait quand on trouve le dernier élément du disque dur*/
-		finalStepAdded = "ID du GPS transmise aux secours." ;
+		finalStepAdded = "Toutes les preuves sont rassemblés pour gagner le procès." ;
 
 		/*the last call, it can be the person we find in the end or anyone else we call to end the quest, allows the game to know it is the final contact that is called and to proceed with the ending*/
 		var missingContact = {"vid" : "Prof", "vod_folder" : "Prof", "username" : "Prof. Francis", "canal" : "video", "avatar" : "prof_avatar.jpg", "subjectChoice": true} ;
