@@ -43,7 +43,7 @@
 							{"foldername":"Best_sellers", "files":["Best_seller_1.jpg", "Best_seller_2.jpg", "Best_seller_3.jpg", "Best_seller_4.jpg", "Best_seller_5.jpg"]}], 
 							"files":["Liste_motifs.jpg", "Liste_noms.jpg"], 
 						},
-						{"foldername": "Historique_judiciaire", "files":["CR_affaire_1992.jpg", "CR_affaire_1996.jpg","CR_affaire_1998.jpg"]},
+						{"foldername": "Historique_judiciaire", "files":["CR_affaire_1992.jpg", "CR_affaire_1996.jpg","CR_affaire_1998.jpg"], "hidden": "true"},
 						{"foldername":"preuves",
 						"folders": [
 							{"foldername": "preuve1", "password":"Je cours plus vite que ma rivale","sequence":1, 
