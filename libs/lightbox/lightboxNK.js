@@ -193,6 +193,7 @@ function startLighBox(){
       container.style.animation = animation.fadeIn;
       container.onclick = () => {};
       container.appendChild(wrapper);
+      openTabSound.play();
 
       if (element.tagName === 'A' && element.getAttribute('data-lightbox') === 'gallery') {
         container.classList.add(classes.gallery);
@@ -227,7 +228,6 @@ function startLighBox(){
         setTimeout(() => {
           content.replaceChild(sortContent(item), content.children[0]);
           content.style.animation = animation.fadeIn;
-
         }, 200);
         currentItem.classList.remove(classes.currentElement);
         item.classList.add(classes.currentElement);
@@ -244,6 +244,7 @@ function startLighBox(){
       toggleEvents('remove');
       container.style.animation = animation.fadeOut;
       wrapper.style.animation = [animation.scaleOut, animation.fadeOut];
+      closeTabSound.play();
       setTimeout(() => {
         toggleScroll();
         element.parentNode.removeChild(container);

@@ -586,6 +586,7 @@ function openIt(nameId){
 	mainElt.style.animation = [animation.scaleIn, animation.fadeIn];
 	mainElt.classList.remove('hidden');
 	TinyStato.logThis(10, "openit", nameId, sequenceNumber) ;
+	openTabSound.play();
 }
 
 function closeIt(nameId){
@@ -599,6 +600,7 @@ function closeIt(nameId){
 		},280);
 	*/
 	TinyStato.logThis(11, "closeit", nameId, sequenceNumber) ;
+	closeTabSound.play();
 }
 
 

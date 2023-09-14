@@ -136,3 +136,7 @@
 		solutionText.winState = "Si Sabine a été secourue, le jeu est fini bravo." ;
 		solutionText.lackMainHint = "Vous devez ouvrir le fichier <b>%s</b><br/>" ;
 		solutionText.password = "Vous devez déverouiller le dossier <b>%s1</b><br/>avec le mot de passe : <b>%s2</b><br/>" ;
+
+		var openTabSound = new Audio("../escaposaurus_examplegamedata/sound/opentab.wav");
+		var closeTabSound = new Audio("../escaposaurus_examplegamedata/sound/closetab.wav");
+		var startupXPSound = new Audio("../escaposaurus_examplegamedata/sound/startup_sound_xp.wav");
