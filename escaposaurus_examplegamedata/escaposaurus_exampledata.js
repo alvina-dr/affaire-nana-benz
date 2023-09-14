@@ -46,9 +46,12 @@
 						{"foldername": "Historique_judiciaire", "files":["CR_affaire_1992.png", "CR_affaire_1996.png","CR_affaire_1998.png"]},
 						{"foldername":"preuves",
 						"folders": [
-							{"foldername": "preuve1", "password":"wandfluehorn","sequence":1},
-							{"foldername": "preuve2", "password":"wandfluehorn","sequence":2},
-							{"foldername": "preuve3", "password":"wandfluehorn","sequence":3}
+							{"foldername": "preuve1", "password":"Je cours plus vite que ma rivale","sequence":1, 
+						"files":["Je_cours_plus_vite_que_ma_rivale.png"]},
+							{"foldername": "preuve2", "password":"Sublime mensonge","sequence":2,
+							"files":["Sublime_mensonge.png"]},
+							{"foldername": "preuve3", "password":"Va et vient","sequence":3,
+							"files":["Va_et_vient.png"]}
 						]}
 					]
 				}],
