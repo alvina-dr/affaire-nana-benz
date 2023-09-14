@@ -425,8 +425,8 @@ function checkCallSubject(userSubject) {
 	var userTryClearedSubject = userSubject.replace(/[^a-z0-9]/gi, '') ;
 
 	if (userTryClearedSubject === '27'.replace(/[^a-z0-9]/gi, '')) {
-		mainHintFound = true;
-		openVideoWindow('Prof', './escaposaurus_examplegamedata/videos/contactVideo/Prof/', false)
+		// mainHintFound = true;
+		openVideoWindow('Prof', './escaposaurus_examplegamedata/videos/contactVideo/Prof/', false, 4)
 		closeIt("call-subject-window");
 	} else {
 		closeIt("call-subject-window");
@@ -508,14 +508,20 @@ function openContactTxTWindow(vid, bigAvatarHelper){
 }
 
 /*open/close video windows*/
-function openVideoWindow(vid, vid_folder, subjectChoice){
+function openVideoWindow(vid, vid_folder, subjectChoice, customSequenceNum){
 	var x = document.getElementById("callVideo-content") ;
 	var t = document.getElementById("callVideo-title") ;
 	
 	var title ;
 	var src ;
 	/*according to case, deal with title and video path*/
-	if(vid == "intro" || vid == "introBis"){
+	if(customSequenceNum !== undefined) {
+		title = titleData.callTitle ;
+		src = vid_folder+"seq"+customSequenceNum+".mp4" ;
+		document.getElementById('divcontact-'+vid).classList.add("already-called") ;
+	}
+
+	else if(vid == "intro" || vid == "introBis"){
 		title = titleData.introTitle ;
 		src = introVideoPath ;
 	}else if(vid == "epilogue"){

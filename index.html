@@ -194,6 +194,8 @@
 			</div>
 			<div class="message-content">
 				Sujet de conversation ? <span id="folderD"></span><br/>
+				<button class="window-btn" onclick="openVideoWindow('Prof', './escaposaurus_examplegamedata/videos/contactVideo/Prof/', false, 0)">Dire bonjour</button>
+				<p>OU</p>
 				<input id="subjectInput" name="subjectInput" type="text" placeholder="De quoi parler ?" value="" autocomplete="off" onkeypress="checkIfEnter(event, subjectInput.value, '', 'checkCallSubject')" />
 				<!-- <input id="folderInput" name="folderInput" type="hidden" value="0" /> -->
 				<button class="window-btn" onclick="checkCallSubject(subjectInput.value)">OK</button>
