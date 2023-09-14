@@ -56,7 +56,7 @@
 					]
 				}],
 			"files":[
-				"Lettre_Mme_Creppy.png"]}
+				"Lettre_Mme_Creppy.jpg"]}
 		} ;
 
 		var gameTitle = "Escaposaurus Scenario Exemple" ;
