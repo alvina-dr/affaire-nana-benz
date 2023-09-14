@@ -36,22 +36,22 @@
 	  	{"root":{
 	  		"folders":
 		  		[{"foldername":"Affaire_Nana_Benz", "password":"peau de léopard","sequence":0,
-				  	"files":["Coupure_presse.png", "Historique_des_ventes.png", "Memo_contacts.png"],
+				  	"files":["Coupure_presse.jpg", "Historique_des_ventes.jpg", "Memo_contacts.jpg"],
 					"folders":[
 						{"foldername":"Références_motifs",
 						"folders": [
 							{"foldername":"Best_sellers", "files":["Best_seller_1.jpg", "Best_seller_2.jpg", "Best_seller_3.jpg", "Best_seller_4.jpg", "Best_seller_5.jpg"]}], 
-							"files":["Liste_motifs.png", "Liste_noms.png"], 
+							"files":["Liste_motifs.jpg", "Liste_noms.jpg"], 
 						},
-						{"foldername": "Historique_judiciaire", "files":["CR_affaire_1992.png", "CR_affaire_1996.png","CR_affaire_1998.png"]},
+						{"foldername": "Historique_judiciaire", "files":["CR_affaire_1992.jpg", "CR_affaire_1996.jpg","CR_affaire_1998.jpg"]},
 						{"foldername":"preuves",
 						"folders": [
 							{"foldername": "preuve1", "password":"Je cours plus vite que ma rivale","sequence":1, 
-						"files":["Je_cours_plus_vite_que_ma_rivale.png"]},
+						"files":["Je_cours_plus_vite_que_ma_rivale.jpg"]},
 							{"foldername": "preuve2", "password":"Sublime mensonge","sequence":2,
-							"files":["Sublime_mensonge.png"]},
+							"files":["Sublime_mensonge.jpg"]},
 							{"foldername": "preuve3", "password":"Va et vient","sequence":3,
-							"files":["Va_et_vient.png"]}
+							"files":["Va_et_vient.jpg"]}
 						]}
 					]
 				}],
@@ -103,7 +103,7 @@
 		*/
 		var normalContacts = [] ;
 		normalContacts[0] = {"vid" : "Avocat", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "avocat_avatar.jpg", "subjectChoice": false} ;
-		normalContacts[1] = {"vid" : "JP", "vod_folder" : "", "username" : "JP (sms si besoin d'aide!!!)", "canal" : "txt", "avatar" : "jp_avatar.png", "bigAvatar" : "albertbig.png", "subjectChoice": false} ;
+		normalContacts[1] = {"vid" : "JP", "vod_folder" : "", "username" : "JP (sms si besoin d'aide!!!)", "canal" : "txt", "avatar" : "jp_avatar.jpg", "bigAvatar" : "albertbig.png", "subjectChoice": false} ;
 
 		/*second part of the list, contact that can help the player*/
 		var helperContacts = [] ;
