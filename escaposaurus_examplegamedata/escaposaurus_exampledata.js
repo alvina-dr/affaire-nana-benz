@@ -36,22 +36,20 @@
 	  	{"root":{
 	  		"folders":
 		  		[{"foldername":"affaire-nana-benz", "password":"peau de léopard","sequence":0,
-				  	"files":["exemple.pdf"], // liste tissus
+				  	"files":["Coupure_presse.png", "Historique_des_ventes.png", "Memo_contacts.png"],
 					"folders":[
-						{"foldername":"références-motifs",
-						"folders": [{
-							"foldername":"Best_sellers",
-							"files":["Best_seller_1.png", "Best_seller_2.png", "Best_seller_3.png", "Best_seller_4.png", "Best_seller_5.png"]
-						}],
-							"files":["idgps.png", "catalogue.png", "best-seller.png"], //les images des motifs qui se vendent le plus
+						{"foldername":"Références_motifs",
+						"folders": [
+							{"foldername":"Best_sellers", "files":["Best_seller_1.png", "Best_seller_2.png", "Best_seller_3.png", "Best_seller_4.png", "Best_seller_5.png"]}], 
+							"files":["Liste_motifs.png", "Liste_noms.png"], 
 						},
-
-						{"foldername":"jugement-passés", 
-							"files":["idgps.png"],"sequence":3}, 
-						{"foldername":"ventes-hollandaises", 
-							"files":["idgps.png"],"sequence":3}, 
-							{"foldername":"preuves", 
-							"files":["idgps.png"],"password":"wandfluehorn","sequence":3}, //chaque preuve que l'on peut débloquer
+						{"foldername": "Historique_judiciaire", "files":["CR_affaire_1992.png", "CR_affaire_1996.png","CR_affaire_1998.png"]},
+						{"foldername":"preuves",
+						"folders": [
+							{"foldername": "preuve1", "password":"wandfluehorn","sequence":1},
+							{"foldername": "preuve2", "password":"wandfluehorn","sequence":2},
+							{"foldername": "preuve3", "password":"wandfluehorn","sequence":3}
+						]}
 					]
 				}],
 			"files":[
@@ -101,8 +99,8 @@
 	their img need to be placed in their video folder, username is their displayed name
 		*/
 		var normalContacts = [] ;
-		normalContacts[0] = {"vid" : "Avocat", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "denise_avatar.jpg", "subjectChoice": false} ;
-		normalContacts[1] = {"vid" : "Albert", "vod_folder" : "", "username" : "Albert (appeler si besoin d'aide!!!)", "canal" : "txt", "avatar" : "albert.png", "bigAvatar" : "albertbig.png", "subjectChoice": false} ;
+		normalContacts[0] = {"vid" : "Avocat", "vod_folder" : "", "username" : "Maître Dupont", "canal" : "video", "avatar" : "avocat_avatar.jpg", "subjectChoice": false} ;
+		normalContacts[1] = {"vid" : "JP", "vod_folder" : "", "username" : "JP (sms si besoin d'aide!!!)", "canal" : "txt", "avatar" : "jp_avatar.png", "bigAvatar" : "albertbig.png", "subjectChoice": false} ;
 
 		/*second part of the list, contact that can help the player*/
 		var helperContacts = [] ;
@@ -113,7 +111,7 @@
 		finalStepAdded = "ID du GPS transmise aux secours." ;
 
 		/*the last call, it can be the person we find in the end or anyone else we call to end the quest, allows the game to know it is the final contact that is called and to proceed with the ending*/
-		var missingContact = {"vid" : "Prof", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "nata_avatar.jpg", "subjectChoice": true} ;
+		var missingContact = {"vid" : "Prof", "vod_folder" : "", "username" : "Prof. Francis", "canal" : "video", "avatar" : "prof_avatar.jpg", "subjectChoice": true} ;
 
 		/*Lou only send text message, they are stored here*/
 		var tips = {} ;

@@ -372,8 +372,13 @@ function isItPasswordProtected(foldername){
 }
 
 function doThePasswordMatch(userTry, foldername){
-	var userTryCleared = userTry.replace(/[^a-z0-9]/gi, '') ;
+	var userTryCleared = userTry.replace(/[^a-z0-9]/gi, '');
+	// userTryCleared.normalize("NFD").replace(/\p{Diacritic}/gu, "")
+	// console.log(userTryCleared);
+
 	var passwordCleared = passwordCenter[foldername].replace(/[^a-z0-9]/gi, '') ;
+	// passwordCleared.normalize("NFD").replace(/\p{Diacritic}/gu, "")
+	// console.log(passwordCleared);
 
 	if(isItPasswordProtected(foldername)
 		&& passwordCleared.toLowerCase() == userTryCleared.toLowerCase()){
