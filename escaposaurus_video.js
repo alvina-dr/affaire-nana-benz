@@ -713,7 +713,6 @@ function solutionClose(iid, spid, spwin){
 function sendNotification(content) {
 	var div = document.getElementById("notification-popup");
 	div.children[1].innerHTML = content;
-	console.log(div.children);
 	openIt("notification-popup");
     setTimeout(function () {
         closeIt("notification-popup");
