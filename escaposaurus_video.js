@@ -441,7 +441,7 @@ function checkPhoneNumber(numberInput) {
 		createContact(missingContact, document.getElementById("normal-contact"));
 		sendNotification("Contact ajouté : " + missingContact.username);
 	} else {
-		openIt("wrongSubject") ;
+		openIt("wrongPhoneNumber") ;
 	}
 	closeIt("add-contact-window");
 }
