@@ -360,7 +360,7 @@ function unlockFolder(unlockedFolder){
 	/*opening a folder change the sequence, the content here is linear*/
 	changingSequence() ;
 
-	sendNotification("Dossier débloqué : " + unlockFolder.name);
+	sendNotification("Dossier débloqué : " + unlockedFolder);
 }
 
 function isItPasswordProtected(foldername){

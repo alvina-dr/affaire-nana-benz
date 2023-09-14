@@ -36,7 +36,7 @@
 	  	{"root":{
 	  		"folders":
 		  		[{"foldername":"Affaire_Nana_Benz", "password":"peau de léopard","sequence":0,
-				  	"files":["Coupure_presse.jpg", "Historique_des_ventes.jpg", "Memo_contacts.jpg"],
+				  	"files":["Coupure_presse.jpg", "Historique_des_ventes.jpg", "Memo_contacts.jpg", "Article_DRG_Creppy.jpg"],
 					"folders":[
 						{"foldername":"Références_motifs",
 						"folders": [
