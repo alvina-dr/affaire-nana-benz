@@ -40,7 +40,7 @@
 					"folders":[
 						{"foldername":"Références_motifs",
 						"folders": [
-							{"foldername":"Best_sellers", "files":["Best_seller_1.png", "Best_seller_2.png", "Best_seller_3.png", "Best_seller_4.png", "Best_seller_5.png"]}], 
+							{"foldername":"Best_sellers", "files":["Best_seller_1.jpg", "Best_seller_2.jpg", "Best_seller_3.jpg", "Best_seller_4.jpg", "Best_seller_5.jpg"]}], 
 							"files":["Liste_motifs.png", "Liste_noms.png"], 
 						},
 						{"foldername": "Historique_judiciaire", "files":["CR_affaire_1992.png", "CR_affaire_1996.png","CR_affaire_1998.png"]},
