@@ -424,9 +424,9 @@ function checkPassword(userTry, foldername){
 function checkCallSubject(userSubject) {
 	var userTryClearedSubject = userSubject.replace(/[^a-z0-9]/gi, '') ;
 
-	if (userTryClearedSubject === 'password'.replace(/[^a-z0-9]/gi, '')) {
+	if (userTryClearedSubject === '27'.replace(/[^a-z0-9]/gi, '')) {
 		mainHintFound = true;
-		openVideoWindow('Nathalie', './escaposaurus_examplegamedata/videos/contactVideo/Nathalie/', false)
+		openVideoWindow('Prof', './escaposaurus_examplegamedata/videos/contactVideo/Prof/', false)
 		closeIt("call-subject-window");
 	} else {
 		closeIt("call-subject-window");
@@ -437,7 +437,7 @@ function checkCallSubject(userSubject) {
 function checkPhoneNumber(numberInput) {
 	var numberInputCleared = numberInput.replace(/[^a-z0-9]/gi, '') ;
 
-	if (numberInputCleared === "0686".replace(/[^a-z0-9]/gi, '') && document.getElementById("divcontact-"+missingContact.vid) === null) {
+	if (numberInputCleared === "156969".replace(/[^a-z0-9]/gi, '') && document.getElementById("divcontact-"+missingContact.vid) === null) {
 		createContact(missingContact, document.getElementById("normal-contact"));
 		sendNotification("Contact ajouté : " + missingContact.username);
 	} else {
@@ -540,7 +540,6 @@ function openVideoWindow(vid, vid_folder, subjectChoice){
 				openIt('call-subject-window');
 			}
 			else {
-				console.log("no choice window");
 				openIt('nocall-window') ;
 			}
 			return;
