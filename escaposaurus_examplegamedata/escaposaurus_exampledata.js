@@ -36,7 +36,7 @@
 	  	{"root":{
 	  		"folders":
 		  		[{"foldername":"Affaire_Nana_Benz", "password":"peau de léopard","sequence":0,
-				  	"files":["Coupure_presse.jpg", "Historique_des_ventes.jpg", "Memo_contacts.jpg", "Article_DRG_Creppy.jpg"],
+				  	"files":["Historique_des_ventes.jpg", "Memo_contacts.png"],
 					"folders":[
 						{"foldername":"Références_motifs",
 						"folders": [
@@ -44,6 +44,7 @@
 							"files":["Liste_motifs.jpg", "Liste_noms.jpg"], 
 						},
 						{"foldername": "Historique_judiciaire", "files":["CR_affaire_1992.jpg", "CR_affaire_1996.jpg","CR_affaire_1998.jpg"], "hidden": "true"},
+						{"foldername": "Archive", "files":["Archive_africa24.mp4", "Article_DRG_Creppy.jpg","Coupure_presse.jpg"], "hidden": "true"},
 						{"foldername":"preuves",
 						"folders": [
 							{"foldername": "preuve1", "password":"Je cours plus vite que ma rivale","sequence":1, 
