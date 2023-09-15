@@ -431,6 +431,7 @@ function checkPassword(userTry, foldername){
 	if(doThePasswordMatch(userTry, foldername)){
 		closeIt("passPrompt-window") ;
 		unlockFolder(foldername) ;
+		goodPasswordSound.play();
 	}else{
 		closeIt("passPrompt-window") ;
 		openIt("wrongPassword") ;
@@ -445,6 +446,7 @@ function checkCallSubject(userSubject) {
 		// mainHintFound = true;
 		openVideoWindow('Prof', './escaposaurus_examplegamedata/videos/contactVideo/Prof/', false, 11);
 		closeIt("call-subject-window");
+		goodPasswordSound.play();
 	} else {
 		//first time call video 10
 		closeIt("call-subject-window");
@@ -459,6 +461,7 @@ function checkPhoneNumber(numberInput) {
 	if (numberInputCleared === "156969".replace(/[^a-z0-9]/gi, '') && document.getElementById("divcontact-"+missingContact.vid) === null) {
 		createContact(missingContact, document.getElementById("normal-contact"));
 		sendNotification("Contact ajouté : " + missingContact.username);
+		goodPasswordSound.play();
 	} else {
 		openIt("wrongPhoneNumber") ;
 		wrongPasswordSound.play();

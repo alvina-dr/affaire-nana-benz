@@ -142,4 +142,5 @@
 		var closeTabSound = new Audio("../escaposaurus_examplegamedata/sound/closetab.wav");
 		var startupXPSound = new Audio("../escaposaurus_examplegamedata/sound/startup_sound_xp.wav");
 		var callingSound = new Audio("../escaposaurus_examplegamedata/sound/call.wav");
-		var wrongPasswordSound = new Audio("../escaposaurus_examplegamedata/sound/wrongpassword.wav")
+		var wrongPasswordSound = new Audio("../escaposaurus_examplegamedata/sound/wrongpassword.wav");
+		var goodPasswordSound = new Audio("../escaposaurus_examplegamedata/sound/goodpassword.wav");
