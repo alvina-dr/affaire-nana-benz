@@ -64,8 +64,8 @@
 		var gameMissionCall = "" ;
 		var gameMissionAccept = "Commencer" ;
 
-		var gameCredit = "Jeu réalisé par :<br/><br/> Alvina Damasio--Razafiarizaka <br>Gabriel Ducray <br>Mathéo Patxi Gonzalez <br>Mahé Letellier <br>Vasco Mendes Ferreira <br>Enzo Tittarelli" ;
-		var gameThanks = "Remerciements : <br/> ;)" ;
+		var gameCredit = "<b>Jeu réalisé par :</b><br/>Alvina Damasio--Razafiarizaka<br>Gabriel Ducray<br>Mathéo Patxi Gonzalez<br>Mahé Letellier<br>Vasco Mendes Ferreira<br>Enzo Tittarelli" ;
+		var gameThanks = "<b>Remerciements :</b><br/>À tous nos playtesters <br/>Au corps enseignant de l'ENJMIN" ;
 
 		var OSName = "Nom" ;
 		var explorerName = "Réseau:/Drive" ;
