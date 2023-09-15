@@ -104,7 +104,7 @@
 		*/
 		var normalContacts = [] ;
 		normalContacts[0] = {"vid" : "Avocat", "vod_folder" : "", "username" : "Maître De Villiers", "canal" : "video", "avatar" : "avocat_avatar.jpg", "subjectChoice": false} ;
-		normalContacts[1] = {"vid" : "JP", "vod_folder" : "", "username" : "JP (sms pour indice!!!)", "canal" : "txt", "avatar" : "jp_avatar.jpg", "bigAvatar" : "jp_avatar.jpg", "subjectChoice": false} ;
+		normalContacts[1] = {"vid" : "JP", "vod_folder" : "", "username" : "JP (sms pour indice!!!)", "canal" : "txt", "avatar" : "jp_avatar.jpg", "bigAvatar" : "jP_big.png", "subjectChoice": false} ;
 
 		/*second part of the list, contact that can help the player*/
 		var helperContacts = [] ;
@@ -119,11 +119,11 @@
 
 		/*Lou only send text message, they are stored here*/
 		var tips = {} ;
-		tips['Albert'] = [] ;
-		tips['Albert'][0] = "Je peux pas répondre à votre appel. Mais je peux vous répondre par écrit. Donc vous cherchez le surnom d'un guide ? Je crois que les contacts sont des guides justement, essayez peut-être de les appeler." ;
-		tips['Albert'][1] = "" ;
-		tips['Albert'][2] = "" ;
-		tips['Albert'][3] = "Ah zut, un dossier verouillé sans infos dans scan mémo ? Y'a forcément un truc mnémotechnique facile à retenir ou retrouver. Les guides en disent quoi ?" ;
+		tips['JP'] = [] ;
+		tips['JP'][0] = "Le mot de passe du drive ? De Villiers t'as pas dit que c'était le premier motif de l'entreprise ? Il est mentionné dans la lettre de la fille, y en a pas milles de toutes façons... Essaie de réfléchir deux secondes avant de me faire perdre mon temps." ;
+		tips['JP'][1] = "Dans les best-sellers ? Il y a un dossier best sellers sur le drive, il y a qu'un seul motif bleu dedans. Tu met son nom dans le dossier preuve 1 pour le consigner. Franchement ça fait combien de temps que tu bosse ici ? Tu sais rien faire par toi même ?" ;
+		tips['JP'][2] = "Une vieille affaire ? Il me semble qu'on a représenté qu'une seule affaire pour le compte de Creppy en 96, tu devrais pouvoir retrouver le compte rendu dans le dossier 'historique judiciaire', le motif mentionné dedans est notre deuxième preuve. Faut que tu apprennes à te démerder par contre parce qu'à ce rythme t'auras jamais tes propres affaires..." ;
+		tips['JP'][3] = "Ah zut, un dossier verouillé sans infos dans scan mémo ? Y'a forcément un truc mnémotechnique facile à retenir ou retrouver. Les guides en disent quoi ?" ;
 
 
 		/*text for the instruction / solution windows*/
