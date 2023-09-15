@@ -434,6 +434,7 @@ function checkPassword(userTry, foldername){
 	}else{
 		closeIt("passPrompt-window") ;
 		openIt("wrongPassword") ;
+		wrongPasswordSound.play();
 	}
 }
 
@@ -448,6 +449,7 @@ function checkCallSubject(userSubject) {
 		//first time call video 10
 		closeIt("call-subject-window");
 		openIt("wrongSubject") ;
+		wrongPasswordSound.play();
 	}
 }
 
@@ -459,6 +461,7 @@ function checkPhoneNumber(numberInput) {
 		sendNotification("Contact ajouté : " + missingContact.username);
 	} else {
 		openIt("wrongPhoneNumber") ;
+		wrongPasswordSound.play();
 	}
 	closeIt("add-contact-window");
 }
