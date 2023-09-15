@@ -328,12 +328,17 @@ function createContact(contact, parent){
 	var im = document.createElement("img") ;
 	im.src = contactVideoRoot+contact.vid+"/"+contact.avatar ;
 	im.classList.add("contact-avatar") ;
-
+	
+	var bell = document.createElement("img") ;
+	bell.src = "escaposaurus_examplegamedata/img/iconBell.png" ;
+	bell.classList.add("contact-bell") ;
+	
 	var sp = document.createElement("span") ;
 	sp.innerHTML = contact.username ;
 
 	x.appendChild(im) ;
-	x.appendChild(sp)
+	x.appendChild(sp);
+	x.appendChild(bell) ;
 	parent.appendChild(x) ;
 }
 

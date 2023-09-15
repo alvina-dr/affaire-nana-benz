@@ -150,7 +150,10 @@ video{
 	text-align: left;
 	margin-bottom:5px;
 	font-weight: bold;
-	color: orange;
+	color: #ffa500;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .contact-div:hover{
@@ -165,6 +168,40 @@ video{
 	margin-right:5px;
 }
 
+.contact-bell {
+	width: 1.2em;
+	height: 1.2em;
+	margin-left: 10px;
+	margin-bottom: 3px;
+	filter: invert(61%) sepia(75%) saturate(1542%) hue-rotate(360deg) brightness(103%) contrast(101%);
+	animation: 1.5s ease-in .5s infinite reverse both running ring;
+}
+
+@keyframes ring{
+    0% {
+        /* transform: scaleX(0); */
+		transform: rotate(00deg);
+    }
+
+	15% {
+		/* transform: scaleX(1); */
+		transform: rotate(-30deg);
+	}
+    30% {
+		transform: rotate(30deg);
+    }
+
+	45% {
+		transform: rotate(-30deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
 .no-call{
 	font-weight: normal;
 	font-style: italic;
@@ -173,6 +210,11 @@ video{
 
 .already-called{
 	font-weight: normal;
+}
+
+.already-called .contact-bell,
+.no-call .contact-bell {
+	display: none;
 }
 
 /* udisk app*/
@@ -661,3 +703,4 @@ hr {
 	margin: 0 10px;
 	border-top: 2px solid rgba(170, 170, 170, 0.601);
 }
+
