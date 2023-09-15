@@ -702,6 +702,11 @@ ul{
 	padding: 10px 0;
 }
 
+.add-contact-div button {
+	font-size: 1em;
+	font-weight: 800;
+}
+
 #date_heure {
 	color: white;
 	align-self: center;
