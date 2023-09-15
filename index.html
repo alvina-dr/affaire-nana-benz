@@ -205,7 +205,7 @@
 				Sujet de conversation ? <span id="folderD"></span><br/>
 				<button class="window-btn" onclick="openVideoWindow('Prof', './escaposaurus_examplegamedata/videos/contactVideo/Prof/', false, 0)">Dire bonjour</button>
 				<p>OU</p>
-				<input id="subjectInput" name="subjectInput" type="text" placeholder="De quoi parler ?" value="" autocomplete="off" onkeypress="checkIfEnter(event, subjectInput.value, '', 'checkCallSubject')" />
+				<input id="subjectInput" name="subjectInput" type="text" placeholder="De quel motif parler ?" value="" autocomplete="off" onkeypress="checkIfEnter(event, subjectInput.value, '', 'checkCallSubject')" />
 				<!-- <input id="folderInput" name="folderInput" type="hidden" value="0" /> -->
 				<button class="window-btn" onclick="checkCallSubject(subjectInput.value)">OK</button>
 				&nbsp;&nbsp;
@@ -309,7 +309,7 @@
 	<!-- SOLUTION -->
 	<div id="solution-window" class="hidden">
 		<div class="app-title">
-			<span class="app-title-span">AIDE / SOLUTION</span>
+			<span class="app-title-span">Aide / Solution</span>
 			<button aria-label="Close" class="lightbox-btn lightbox-btn-close" onclick="solutionClose('tips','spoiler', 'solution-window')"></button>
 		</div>
 		<div class="message-content">
@@ -328,7 +328,7 @@
 
 	<!-- CREDIT -->
 	<div id="credit-window" class="hidden">
-		<div class="app-title"><span class="app-title-span">CREDITS</span>
+		<div class="app-title"><span class="app-title-span">Crédits</span>
 			<button aria-label="Close" class="lightbox-btn lightbox-btn-close" onclick="closeIt('credit-window')"></button>
 		</div>
 		<div class="message-content">
