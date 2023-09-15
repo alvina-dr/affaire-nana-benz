@@ -138,9 +138,9 @@
 		solutionText.lackMainHint = "Vous devez ouvrir le fichier <b>%s</b><br/>" ;
 		solutionText.password = "Vous devez déverouiller le dossier <b>%s1</b><br/>avec le mot de passe : <b>%s2</b><br/>" ;
 
-		var openTabSound = new Audio("../escaposaurus_examplegamedata/sound/opentab.wav");
-		var closeTabSound = new Audio("../escaposaurus_examplegamedata/sound/closetab.wav");
-		var startupXPSound = new Audio("../escaposaurus_examplegamedata/sound/startup_sound_xp.wav");
-		var callingSound = new Audio("../escaposaurus_examplegamedata/sound/call.wav");
-		var wrongPasswordSound = new Audio("../escaposaurus_examplegamedata/sound/wrongpassword.wav");
-		var goodPasswordSound = new Audio("../escaposaurus_examplegamedata/sound/goodpassword.wav");
+		var openTabSound = new Audio(gameRoot+"escaposaurus_examplegamedata/sound/opentab.wav");
+		var closeTabSound = new Audio(gameRoot+"escaposaurus_examplegamedata/sound/closetab.wav");
+		var startupXPSound = new Audio(gameRoot+"escaposaurus_examplegamedata/sound/startup_sound_xp.wav");
+		var callingSound = new Audio(gameRoot+"escaposaurus_examplegamedata/sound/call.wav");
+		var wrongPasswordSound = new Audio(gameRoot+"escaposaurus_examplegamedata/sound/wrongpassword.wav");
+		var goodPasswordSound = new Audio(gameRoot+"escaposaurus_examplegamedata/sound/goodpassword.wav");
