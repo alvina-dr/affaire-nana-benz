@@ -60,8 +60,8 @@
 				"Lettre_Mme_Creppy.jpg"]}
 		} ;
 
-		var gameTitle = "Escaposaurus Scenario Exemple" ;
-		var gameDescriptionHome = "Ceci est une courte aventure d'exemple pour montrer ce que le framework Escaposaurus permet facilement de réaliser.<br/>Le code source est téléchargeable sur <a href='https://github.com/RedNaK/escaposaurus' target='_blank'>GitHub</a>" ;
+		var gameTitle = "Wax Up" ;
+		var gameDescriptionHome = "Ceci est une courte aventure réalisée par des étudiants du master JMIN." ;
 		var gameMissionCall = "" ;
 		var gameMissionAccept = "Commencer" ;
 
