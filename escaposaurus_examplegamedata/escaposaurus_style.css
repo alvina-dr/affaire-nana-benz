@@ -124,7 +124,7 @@ video{
 	height:auto;
 	padding:0;
 	margin: auto;
-	margin-top: 55vh;
+	margin-top: 5vh;
 	background-color: var(--xp-dark-grey);
 	border:.2em solid var(--xp-dark-blue);
 	border-radius: .5em .5em 0 0;
@@ -138,6 +138,19 @@ video{
 	text-align: center;
 	background-color:#ccc;
 	color:black;
+}
+
+#clueApp {
+	width: fit-content;
+	margin-top: 5vh;
+	margin-left: 3vw;
+	height:auto;
+	padding:0;
+	background-color: var(--xp-dark-grey);
+	border:.2em solid var(--xp-dark-blue);
+	border-radius: .5em .5em 0 0;
+	overflow: auto;
+	justify-self: center;
 }
 
 .contact-list{

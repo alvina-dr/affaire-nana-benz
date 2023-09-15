@@ -82,14 +82,23 @@
 		<div id='main-game-div' class="container">
 			<div class="row">
 				<div class="col-sm-6" style="height:85%;">
+					<div id="clueApp">
+						<div class="app-title">
+							<span class="app-title-span">Contrefaçon</span>
+							<button id="btn-closecall" class="lightbox-btn lightbox-btn-close lightbox-btn-close-deactivated"></button>
+						</div>
+						<div>
+							<img id="contrefacon-image" src="escaposaurus_examplegamedata/img/Contrefacon/contrefacon_0.jpg" style="height: 50vh;">
+						</div>
+					</div>
+
 					<div id="callApp">
 						<div class="app-title">
 							<span class="app-title-span" id="callerApp-name"></span>
 							<button id="btn-closecall" class="lightbox-btn lightbox-btn-close lightbox-btn-close-deactivated"></button>
 						</div>
 						<div id="callApp-prompt" style="display: none;"></div>
-						<div id="normal-contact" class="contact-list">
-						</div>
+						<div id="normal-contact" class="contact-list"></div>
 						<!-- <div id="callApp-help">
 							Si besoin d'aide et d'indice pour trouver un mot de passe.
 						</div> -->
@@ -99,8 +108,8 @@
 						<div class="add-contact-div">
 							<button onclick="openIt('add-contact-window')">+ Nouveau contact</button>
 						</div>
+					</div>
 				</div>
-			</div>
 
 				<div class="col-sm-6" style="height:85%;">
 					<div id="folderApp">

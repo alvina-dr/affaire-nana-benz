@@ -618,6 +618,7 @@ function changingSequence(){
 	sequenceNumber++ ;
 
 	if(sequenceNumber >= sequenceWin){
+		document.getElementById("contrefacon-image").src = "escaposaurus_examplegamedata/img/Contrefacon/contrefacon_3.jpg"
 		TinyStato.logThis(2, "win", "", sequenceNumber) ;
 		// unlockContacts() ;
 		win() ;
@@ -632,9 +633,11 @@ function changingSequence(){
 		if(sequenceNumber===2) {
 			openIt("calling-window");
 			customCall = "callAvocatToilettes";
+			document.getElementById("contrefacon-image").src = "escaposaurus_examplegamedata/img/Contrefacon/contrefacon_1.jpg"
 		} else if (sequenceNumber === 3) {
 			openIt("calling-window");
 			customCall = "callBureau";
+			document.getElementById("contrefacon-image").src = "escaposaurus_examplegamedata/img/Contrefacon/contrefacon_2.jpg"
 		}
 	}
 
