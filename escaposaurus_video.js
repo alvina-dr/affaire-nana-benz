@@ -568,21 +568,21 @@ function openVideoWindow(vid, vid_folder, subjectChoice, customSequenceNum){
 		var cl = document.getElementById("btn-closecall") ;
 		cl.addEventListener("click", callbackCloseMissingCall) ;
 	}else{
-		if(mainHintFound){
-			title = titleData.callTitle ;
-			src = vid_folder+"seq"+sequenceNumber+".mp4" ;
-			document.getElementById('divcontact-'+vid).classList.add("already-called") ;
-		}else{
-			/*no call, because main clue not opened, display of message*/
-			if (subjectChoice === 'true')  {
-
-				openSimplePrompt("subject");
-			}
-			else {
-				openIt('nocall-window') ;
-			}
+		if (subjectChoice === 'true')  {
+			openSimplePrompt("subject");
 			return;
+		} else {
+			if(mainHintFound){
+				title = titleData.callTitle ;
+				src = vid_folder+"seq"+sequenceNumber+".mp4" ;
+				document.getElementById('divcontact-'+vid).classList.add("already-called") ;
+			}else{
+				/*no call, because main clue not opened, display of message*/
+				openIt('nocall-window') ;
+				return;
+			}
 		}
+
 	}
 
 	TinyStato.logThis(12, "playvideo", vid, sequenceNumber) ;
