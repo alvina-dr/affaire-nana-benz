@@ -94,10 +94,10 @@
 		/*if you put in the string "noHint", player will be able to immediatly call the contact at the beginning of the sequence*/
 		/*if you put "none" or anything that is not an existing filename, the player will NOT be able to call the contacts during this sequence*/
 		var seqMainHint = [] ;
-		seqMainHint[0] = "" ;
+		seqMainHint[0] = "noHint" ;
 		seqMainHint[1] = "Best_seller_5.jpg" ; /*if you put anything that is not an existing filename of the udisk, the player will never be able to call any contacts or get helps during this sequence*/
-		seqMainHint[2] = "aucun" ;
-		seqMainHint[3] = "" ;
+		seqMainHint[2] = "noHint" ;
+		seqMainHint[3] = "noHint" ;
 
 		/*contact list, vid is the name of their folder in the videoContact folder, then the game autoload the video named seq%number of the current sequence%, e.g. seq0.MP4 for the first sequence (numbered 0 because computer science habits)
 	their img need to be placed in their video folder, username is their displayed name
@@ -123,7 +123,7 @@
 		tips['JP'][0] = "Le mot de passe du drive ? De Villiers t'as pas dit que c'était le premier motif de l'entreprise ? Il est mentionné dans la lettre de la fille, y en a pas milles de toutes façons... Essaie de réfléchir deux secondes avant de me faire perdre mon temps." ;
 		tips['JP'][1] = "Dans les best-sellers ? Il y a un dossier best sellers sur le drive, il y a qu'un seul motif bleu dedans. Tu met son nom dans le dossier preuve 1 pour le consigner. Franchement ça fait combien de temps que tu bosse ici ? Tu sais rien faire par toi même ?" ;
 		tips['JP'][2] = "Une vieille affaire ? Il me semble qu'on a représenté qu'une seule affaire pour le compte de Creppy en 96, tu devrais pouvoir retrouver le compte rendu dans le dossier 'historique judiciaire', le motif mentionné dedans est notre deuxième preuve. Faut que tu apprennes à te démerder par contre parce qu'à ce rythme t'auras jamais tes propres affaires..." ;
-		tips['JP'][3] = "Ah zut, un dossier verouillé sans infos dans scan mémo ? Y'a forcément un truc mnémotechnique facile à retenir ou retrouver. Les guides en disent quoi ?" ;
+		tips['JP'][3] = "Sur l'historique de ventes il y a une irrégularité massive sur le nombre de ventes d'un motif. C'est celui là que tu cherches. Je pensais que tu serais capable de voir au moins ça." ;
 
 
 		/*text for the instruction / solution windows*/

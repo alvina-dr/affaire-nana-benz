@@ -121,6 +121,14 @@ function loadGame(folders, files, overlay){
     setTimeout(function () {
 		openIt('calling-window') ;
 	},500);
+
+	if(seqMainHint[sequenceNumber] == "noHint"){
+		mainHintFound = true ;
+		unlockContacts() ;
+		var z = document.getElementById('divcontact-Avocat') ;
+		z.classList.add("no-call") ;
+		z.classList.remove("already-called") ;
+	}
 }
 
 
@@ -635,6 +643,7 @@ function changingSequence(){
 	}else{
 		TinyStato.logThis(3, "newsequence", "", sequenceNumber) ;
 		mainHintFound = false ;
+
 		lockContacts() ;
 		if(seqMainHint[sequenceNumber] == "noHint"){
 			mainHintFound = true ;
