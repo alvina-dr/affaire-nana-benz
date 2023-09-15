@@ -464,7 +464,6 @@ function openPasswordPrompt(foldername){
 	if(sequenceFolder[sequenceNumber] == foldername){
 		document.getElementById("passwordInput").value = "" ;
 
-
 		var x = document.getElementById("folderInput") ;
 		x.value = foldername ;
 
@@ -486,6 +485,18 @@ function openPasswordPrompt(foldername){
 	}
 }
 
+function openSimplePrompt(promptType) {
+	if (promptType === "subject") {
+		document.getElementById("subjectInput").value = "" ;
+		openIt('call-subject-window');
+		document.getElementById("subjectInput").focus() ;
+	} else if (promptType === "number") {
+		document.getElementById("numInput").value = "" ;
+		openIt('add-contact-window');
+		document.getElementById("numInput").focus() ;
+	}
+}
+
 /*specifical bad UI to avoid user entering many password*/
 function closeWrongPassword(){
 	closeIt("passPrompt-window") ;
@@ -498,7 +509,6 @@ const animation = {
 	scaleIn: 'scaleIn .3s',
 	scaleOut: 'scaleOut .3s'
 };
-
 
 function openContactTxTWindow(vid, bigAvatarHelper){
 	if(mainHintFound){
@@ -550,8 +560,8 @@ function openVideoWindow(vid, vid_folder, subjectChoice, customSequenceNum){
 		}else{
 			/*no call, because main clue not opened, display of message*/
 			if (subjectChoice === 'true')  {
-				document.getElementById("subjectInput").value = "" ;
-				openIt('call-subject-window');
+
+				openSimplePrompt("subject");
 			}
 			else {
 				openIt('nocall-window') ;
