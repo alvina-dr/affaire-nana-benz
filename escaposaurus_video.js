@@ -113,6 +113,7 @@ function loadGame(folders, files, overlay){
 
     /*close the overlay*/
     closeIt(overlay) ;
+	// startupXPSound.play();
 
     /*now we open the intro video, or we have a page before, we need to decide, same for credits :/*/
     /*ok y'a un truc de sécurité qui fait que ça n'auto-play pas si y'a pas eu un click avant*/
@@ -580,6 +581,9 @@ function closeVideoWindow(parentElem){
 	var x = document.getElementById("callVideo-content") ;
 	while (x.firstChild) {
 		x.removeChild(x.lastChild);
+	}
+	if(winState === true) {
+		openIt("end-game");
 	}
 }
 

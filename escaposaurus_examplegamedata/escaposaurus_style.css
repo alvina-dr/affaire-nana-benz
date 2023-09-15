@@ -239,6 +239,7 @@ video{
 	text-align: left;
 }
 
+#end-game,
 #overlay-index{
 	position:absolute;
 	z-index:310;
@@ -313,6 +314,7 @@ video{
 	top: 70%;
 }
 
+#end-game button,
 #wrongPhoneNumber button,
 #add-contact-window button,
 .add-contact-div button,
@@ -341,6 +343,7 @@ video{
 	font-weight:bold;
 }
 
+#end-game button:hover,
 #wrongPhoneNumber button:hover,
 #add-contact-window button:hover,
 #wrongSubject button:hover,
@@ -578,6 +581,7 @@ ul{
 	justify-content: flex-end;
 }
 
+#end-game .lightbox-btn-close, 
 #wrongPhoneNumber .lightbox-btn-close,
 #add-contact-window .lightbox-btn-close,
 #wrongSubject .lightbox-btn-close,
@@ -606,6 +610,7 @@ ul{
 	transition: none;
 }
 
+#end-game .lightbox-btn-close-deactivated,
 #wrongPhoneNumber .lightbox-btn-close-deactivated,
 #add-contact-window .lightbox-btn-close-deactivated,
 #wrongSubject .lightbox-btn-close-deactivated,
@@ -628,6 +633,7 @@ ul{
 	cursor:default;
 }
 
+#end-game .lightbox-btn-close-deactivated:hover,
 #wrongPhoneNumber .lightbox-btn-close-deactivated:hover,
 #add-contact-window .lightbox-btn-close-deactivated:hover,
 #wrongSubject .lightbox-btn-close-deactivated:hover,
