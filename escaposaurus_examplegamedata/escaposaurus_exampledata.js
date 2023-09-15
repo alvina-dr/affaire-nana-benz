@@ -141,3 +141,4 @@
 		var openTabSound = new Audio("../escaposaurus_examplegamedata/sound/opentab.wav");
 		var closeTabSound = new Audio("../escaposaurus_examplegamedata/sound/closetab.wav");
 		var startupXPSound = new Audio("../escaposaurus_examplegamedata/sound/startup_sound_xp.wav");
+		var callingSound = new Audio("../escaposaurus_examplegamedata/sound/call.wav")

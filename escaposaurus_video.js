@@ -120,6 +120,7 @@ function loadGame(folders, files, overlay){
     /*faudra juste faire un message, call entrant, puis ok qui ouvre cette vidéo*/
     setTimeout(function () {
 		openIt('calling-window') ;
+		callingSound.play();
 	},500);
 
 	if(seqMainHint[sequenceNumber] == "noHint"){
@@ -651,10 +652,12 @@ function changingSequence(){
 		}
 		if(sequenceNumber===2) {
 			openIt("calling-window");
+			callingSound.play();
 			customCall = "callAvocatToilettes";
 			document.getElementById("contrefacon-image").src = "escaposaurus_examplegamedata/img/Contrefacon/contrefacon_1.jpg"
 		} else if (sequenceNumber === 3) {
 			openIt("calling-window");
+			callingSound.play();
 			customCall = "callBureau";
 			document.getElementById("contrefacon-image").src = "escaposaurus_examplegamedata/img/Contrefacon/contrefacon_2.jpg"
 		}
@@ -680,6 +683,7 @@ function win(){
 function closeNewContact(d){
 	closeIt(d) ;
 	openIt("calling-window");
+	callingSound.play();
 	// var nc = document.getElementById("normal-contact") ;
 	// createContact(missingContact, nc) ;
 }
@@ -707,7 +711,8 @@ var callbackCloseMissingCall = function(){
 	var cl = document.getElementById("btn-closecall") ;
 	cl.removeEventListener("click", callbackCloseMissingCall) ;
 	setTimeout(function () {
-		openIt('calling-window') ;
+		openIt('calling-window');
+		callingSound.play();
 	},1000);
 }
 
