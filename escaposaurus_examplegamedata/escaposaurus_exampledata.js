@@ -64,7 +64,7 @@
 		var gameMissionCall = "" ;
 		var gameMissionAccept = "Commencer" ;
 
-		var gameCredit = "Un jeu conçu et réalisé par : <br/>Stéphanie Mader" ;
+		var gameCredit = "Jeu réalisé par :<br/><br/> Alvina Damasio--Razafiarizaka <br>Gabriel Ducray <br>Mathéo Patxi Gonzalez <br>Mahé Letellier <br>Vasco Mendes Ferreira <br>Enzo Tittarelli" ;
 		var gameThanks = "Remerciements : <br/> ;)" ;
 
 		var OSName = "Nom" ;
