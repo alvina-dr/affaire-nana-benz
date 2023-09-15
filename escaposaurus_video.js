@@ -462,6 +462,8 @@ function checkPhoneNumber(numberInput) {
 		createContact(missingContact, document.getElementById("normal-contact"));
 		sendNotification("Contact ajouté : " + missingContact.username);
 		goodPasswordSound.play();
+		document.getElementById("divcontact-"+missingContact.vid).classList.remove("no-call");
+		document.getElementById("divcontact-"+missingContact.vid).classList.remove("already-called");
 	} else {
 		openIt("wrongPhoneNumber") ;
 		wrongPasswordSound.play();
